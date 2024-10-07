@@ -1,0 +1,30 @@
+theme = "tokyonight"
+
+
+# Font
+
+font-style = Regular
+font-style-italic = Regular Italic
+font-style-bold = Bold
+font-thicken = true
+font-size = 16
+adjust-cell-height = 20%
+
+ background-opacity = 0.90
+
+# Cursor style
+cursor-style-blink = true
+
+# Clipboard settings
+clipboard-read = allow
+clipboard-write = allow
+
+# Allow option to work as alt on macos
+macos-option-as-alt = false
+
+# Always show ghostty as the title
+title = 👻 
+gtk-titlebar = false
+
+# Bindings
+keybind = super+shift+x=close_surface

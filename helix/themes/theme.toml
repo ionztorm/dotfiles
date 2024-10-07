@@ -1,0 +1,10 @@
+inherits = "ayu_mirage"
+"ui.background" ={}
+"ui.linenr" = { fg = "linenr" }
+"ui.linenr.selected" = { fg = "curlinenr" }
+"ui.cursorline.primary" = { bg = "cursorline" }
+
+[palette]
+linenr = "#8C8C8C"
+curlinenr = "#FFFFF0"
+cursorline = "#181B24"
