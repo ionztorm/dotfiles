@@ -2,15 +2,15 @@ theme = "tokyonight"
 
 
 # Font
-
+font-family = "Geist Mono"
 font-style = Regular
 font-style-italic = Regular Italic
 font-style-bold = Bold
 font-thicken = true
-font-size = 16
+font-size = 17
 adjust-cell-height = 20%
 
- background-opacity = 0.90
+ background-opacity = 0.97
 
 # Cursor style
 cursor-style-blink = true

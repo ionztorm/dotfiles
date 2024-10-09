@@ -21,7 +21,7 @@ return {
 				["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
 			}
 
-			local tsserver_inlay_hints = {
+			local ts_ls_inlay_hints = {
 				includeInlayEnumMemberValueHints = true,
 				includeInlayFunctionLikeReturnTypeHints = true,
 				includeInlayFunctionParameterTypeHints = true,
@@ -52,19 +52,18 @@ return {
 				html = {},
 				tailwindcss = {},
 				cssls = {},
-				--tsserver = {
-				--settings = {
-				--maxTsServerMemory = 12288,
-				--typescript = {
-				--	inlayHints = tsserver_inlay_hints,
-				--},
-				--javascript = {
-				--	inlayHints = tsserver_inlay_hints,
-				--},
-				--},
-				--},
+				ts_ls = {
+					settings = {
+						maxts_lsMemory = 12288,
+						typescript = {
+							inlayHints = ts_ls_inlay_hints,
+						},
+						javascript = {
+							inlayHints = ts_ls_inlay_hints,
+						},
+					},
+				},
 				prismals = {},
-				ts_ls = {},
 			}
 
 			local formatters = {
@@ -91,7 +90,6 @@ return {
 			mason_lspconfig.setup_handlers({
 				function(server_name)
 					local config = servers[server_name] or {}
-					server_name = server_name == "tsserver" and "ts_ls" or server_name
 					config.capabilities = capabilities -- Add LSP capabilities
 					config.handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {})
 					lspconfig[server_name].setup(config)

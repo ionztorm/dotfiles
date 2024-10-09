@@ -24,4 +24,3 @@ lazy.setup({
 		notify = false,
 	},
 })
-

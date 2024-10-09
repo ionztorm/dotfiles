@@ -25,7 +25,7 @@ opt.title = true -- Set terminal title
 opt.termguicolors = true
 opt.showcmd = true -- Show command in the bottom bar
 opt.cmdheight = 0 -- Command line height
-opt.laststatus = 0 -- Hide status bar
+-- opt.laststatus = 0 -- Hide status bar
 opt.number = true -- Enable line numbers
 opt.relativenumber = true -- Relative line numbers
 opt.cursorline = true -- Highlight the current line
@@ -64,7 +64,7 @@ opt.fileencoding = "utf-8" -- Set file encoding to utf-8
 -- ===========================================
 -- Scrolling and Cursor Settings
 -- ===========================================
--- opt.scrolloff = 10 -- Keep 10 lines visible when scrolling
+opt.scrolloff = 5 -- Keep 10 lines visible when scrolling
 opt.sidescrolloff = 5 -- Keep 5 columns visible when scrolling horizontally
 
 -- ===========================================
