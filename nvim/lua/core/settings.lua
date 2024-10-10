@@ -6,6 +6,12 @@ local opt = vim.opt -- Shorten vim.opt to opt
 local cmd = vim.cmd -- Shorten vim.cmd to cmd
 
 -- ===========================================
+-- For neotree
+-- ===========================================
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- ===========================================
 -- Leader Key Settings
 -- ===========================================
 g.mapleader = " " -- Set space as the leader key

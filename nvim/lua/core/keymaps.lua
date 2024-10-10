@@ -16,10 +16,80 @@ end
 map("n", "<leader>q", ":q<CR>", { desc = "Close the current window" })
 map("n", "<leader>w", ":w<CR>", { desc = "Save" })
 
+-- Move lines up and down
+map("n", "<A-Up>", ":m .-2<CR>==", { desc = "Move line up" })
+map("n", "<A-Down>", ":m .+1<CR>==", { desc = "Move line down" })
+map("x", "<A-Up>", ":move '<-2<CR>gv-gv", { desc = "Move selected lines up" })
+map("x", "<A-Down>", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
 
--- -- Telescope Maps
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+-- buffers
+map("n", "<leader>bn", ":bnext<CR>", { desc = "Switch to the next buffer" })
+map("n", "<leader>bp", ":bprevious<CR>", { desc = "Switch to the previous buffer" })
+map("n", "<leader>bx", ":bdelete<CR>", { desc = "Close the current buffer" })
+map("n", "<leader>bd", ":%bd|e#<CR>", { desc = "Close all buffers except the current one" })
+
+-- #############################################
+-- Plugins
+-- #############################################
+
+-- lazygit
+map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open LazyGit" })
+
+-- neotree
+map("n", "<leader>ee", ":Neotree toggle<CR>", { desc = "Togglu Neotree" })
+
+--Telescope Maps
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+
+-- lsp
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		local bufnr = args.buf
+
+		local function toggle_inlay_hints()
+			vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({}))
+		end
+		-- Create key mappings
+		map("n", "<leader>ih", toggle_inlay_hints, { desc = "Toggle inlay hints", buffer = bufnr })
+		map("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition", buffer = bufnr })
+		map("n", "<leader>ch", vim.lsp.buf.hover, { desc = "Hover info", buffer = bufnr })
+		map("n", "<leader>ci", vim.lsp.buf.implementation, { desc = "Go to implementation", buffer = bufnr })
+		map("n", "<leader>cr", vim.lsp.buf.references, { desc = "Show references", buffer = bufnr })
+		map("n", "<leader>cn", vim.lsp.buf.rename, { desc = "Rename symbol", buffer = bufnr })
+		map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = bufnr })
+		map("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code", buffer = bufnr })
+		map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open diagnostic", buffer = bufnr })
+		map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic", buffer = bufnr })
+		map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic", buffer = bufnr })
+	end,
+})
+vim.api.nvim_create_autocmd("LspDetach", {
+	callback = function(args)
+		local bufnr = args.buf
+
+		-- Utility function to safely delete keymaps
+		local function safe_del_keymap(bufnr, mode, lhs)
+			local status, err = pcall(vim.api.nvim_buf_del_keymap, bufnr, mode, lhs)
+			if not status then
+				print("Warning: " .. err) -- Optional: Log the error
+			end
+		end
+
+		-- Attempt to delete key mappings safely
+		safe_del_keymap(bufnr, "n", "<leader>cd")
+		safe_del_keymap(bufnr, "n", "<leader>ch")
+		safe_del_keymap(bufnr, "n", "<leader>ci")
+		safe_del_keymap(bufnr, "n", "<leader>cr")
+		safe_del_keymap(bufnr, "n", "<leader>cn")
+		safe_del_keymap(bufnr, "n", "<leader>ca")
+		safe_del_keymap(bufnr, "n", "<leader>cf")
+		safe_del_keymap(bufnr, "n", "<leader>e")
+		safe_del_keymap(bufnr, "n", "[d")
+		safe_del_keymap(bufnr, "n", "]d")
+		safe_del_keymap(bufnr, "n", "<leader>ii")
+	end,
+})
