@@ -10,6 +10,7 @@ return {
 		},
 
 		config = function()
+			local lspmaps = require("core.keymaps").lsp
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
 			local lspconfig = require("lspconfig")
@@ -31,6 +32,10 @@ return {
 				includeInlayVariableTypeHints = true,
 				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
 			}
+
+			local on_attach = function(_client, bufnr)
+				lspmaps(bufnr)
+			end
 
 			local servers = {
 				biome = {},
@@ -92,6 +97,7 @@ return {
 					local config = servers[server_name] or {}
 					config.capabilities = capabilities -- Add LSP capabilities
 					config.handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {})
+					config.on_attach = on_attach
 					lspconfig[server_name].setup(config)
 				end,
 			})

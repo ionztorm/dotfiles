@@ -12,6 +12,8 @@ local function map(mode, lhs, rhs, opts)
 	vim.keymap.set(mode, lhs, rhs, opts)
 end
 
+local M = {}
+
 -- Set key mappings using the utility function
 map("n", "<leader>q", ":q<CR>", { desc = "Close the current window" })
 map("n", "<leader>w", ":w<CR>", { desc = "Save" })
@@ -26,7 +28,7 @@ map("x", "<A-Down>", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" 
 map("n", "<leader>bn", ":bnext<CR>", { desc = "Switch to the next buffer" })
 map("n", "<leader>bp", ":bprevious<CR>", { desc = "Switch to the previous buffer" })
 map("n", "<leader>bx", ":bdelete<CR>", { desc = "Close the current buffer" })
-map("n", "<leader>bd", ":%bd|e#<CR>", { desc = "Close all buffers except the current one" })
+map("n", "<leader>bd", ":%bd|e#|bd#<CR>", { desc = "Close all buffers except the current one" })
 
 -- #############################################
 -- Plugins
@@ -46,50 +48,16 @@ vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" 
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
 
 -- lsp
-vim.api.nvim_create_autocmd("LspAttach", {
-	callback = function(args)
-		local bufnr = args.buf
 
-		local function toggle_inlay_hints()
-			vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({}))
-		end
-		-- Create key mappings
-		map("n", "<leader>ih", toggle_inlay_hints, { desc = "Toggle inlay hints", buffer = bufnr })
-		map("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition", buffer = bufnr })
-		map("n", "<leader>ch", vim.lsp.buf.hover, { desc = "Hover info", buffer = bufnr })
-		map("n", "<leader>ci", vim.lsp.buf.implementation, { desc = "Go to implementation", buffer = bufnr })
-		map("n", "<leader>cr", vim.lsp.buf.references, { desc = "Show references", buffer = bufnr })
-		map("n", "<leader>cn", vim.lsp.buf.rename, { desc = "Rename symbol", buffer = bufnr })
-		map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = bufnr })
-		map("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code", buffer = bufnr })
-		map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open diagnostic", buffer = bufnr })
-		map("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic", buffer = bufnr })
-		map("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic", buffer = bufnr })
-	end,
-})
-vim.api.nvim_create_autocmd("LspDetach", {
-	callback = function(args)
-		local bufnr = args.buf
+M.lsp = function(bufnr)
+	map("n", "<leader>cd", vim.lsp.buf.definition, { desc = "Go to definition", buffer = bufnr })
+	map("n", "<leader>ch", vim.lsp.buf.hover, { desc = "Hover info", buffer = bufnr })
+	map("n", "<leader>ci", vim.lsp.buf.implementation, { desc = "Go to implementation", buffer = bufnr })
+	map("n", "<leader>cr", vim.lsp.buf.references, { desc = "Show references", buffer = bufnr })
+	map("n", "<leader>cn", vim.lsp.buf.rename, { desc = "Rename symbol", buffer = bufnr })
+	map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action", buffer = bufnr })
+	map("n", "<leader>cf", vim.lsp.buf.format, { desc = "Format code", buffer = bufnr })
+	map("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open diagnostic", buffer = bufnr })
+end
 
-		-- Utility function to safely delete keymaps
-		local function safe_del_keymap(bufnr, mode, lhs)
-			local status, err = pcall(vim.api.nvim_buf_del_keymap, bufnr, mode, lhs)
-			if not status then
-				print("Warning: " .. err) -- Optional: Log the error
-			end
-		end
-
-		-- Attempt to delete key mappings safely
-		safe_del_keymap(bufnr, "n", "<leader>cd")
-		safe_del_keymap(bufnr, "n", "<leader>ch")
-		safe_del_keymap(bufnr, "n", "<leader>ci")
-		safe_del_keymap(bufnr, "n", "<leader>cr")
-		safe_del_keymap(bufnr, "n", "<leader>cn")
-		safe_del_keymap(bufnr, "n", "<leader>ca")
-		safe_del_keymap(bufnr, "n", "<leader>cf")
-		safe_del_keymap(bufnr, "n", "<leader>e")
-		safe_del_keymap(bufnr, "n", "[d")
-		safe_del_keymap(bufnr, "n", "]d")
-		safe_del_keymap(bufnr, "n", "<leader>ii")
-	end,
-})
+return M
