@@ -1,8 +1,7 @@
-theme = "tokyonight"
-
+theme = "catppuccin-mocha"
 
 # Font
-font-family = "Cartograph CF"
+font-family = "MonoLisa"
 font-style = Regular
 font-style-italic = Regular Italic
 font-style-bold = Bold
@@ -10,7 +9,7 @@ font-thicken = true
 font-size = 15
 adjust-cell-height = 10%
 
- background-opacity = 0.97
+ background-opacity = 0.90
 
 # Cursor style
 cursor-style-blink = true
