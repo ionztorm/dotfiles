@@ -53,7 +53,6 @@ return {
 						},
 					},
 				},
-				gofumpt = {},
 				html = {},
 				tailwindcss = {},
 				cssls = {},
@@ -74,16 +73,19 @@ return {
 			local formatters = {
 				biome = {},
 				prettierd = {},
+				gofumpt = {},
 				prettier = {},
 				stylua = {},
+				["blade-formatter"] = {},
 			}
-			local manually_installed_servers = {}
+			local manually_installed_servers = { "ocamllsp", "gleam", "rust_analyzer" }
+
 			local mason_tools_to_install = vim.tbl_keys(vim.tbl_deep_extend("force", {}, servers, formatters))
+
 			local ensure_installed = vim.tbl_filter(function(name)
 				return not vim.tbl_contains(manually_installed_servers, name)
 			end, mason_tools_to_install)
 
-			-- Ensure the servers are installed
 			require("mason-tool-installer").setup({
 				auto_update = true,
 				run_on_start = true,
@@ -92,15 +94,18 @@ return {
 				ensure_installed = ensure_installed,
 			})
 
-			mason_lspconfig.setup_handlers({
-				function(server_name)
-					local config = servers[server_name] or {}
-					config.capabilities = capabilities -- Add LSP capabilities
-					config.handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {})
-					config.on_attach = on_attach
-					lspconfig[server_name].setup(config)
-				end,
-			})
+			for name, config in pairs(servers) do
+				lspconfig[name].setup({
+					autostart = config.autostart,
+					cmd = config.cmd,
+					capabilities = capabilities,
+					filetypes = config.filetypes,
+					handlers = vim.tbl_deep_extend("force", {}, default_handlers, config.handlers or {}),
+					on_attach = on_attach,
+					settings = config.settings,
+					root_dir = config.root_dir,
+				})
+			end
 
 			require("mason").setup({
 				ui = {
@@ -108,8 +113,11 @@ return {
 				},
 			})
 
+			-- Extract the server names (keys) from the servers table
+			local ensure_installed_servers = vim.tbl_keys(servers)
+
 			mason_lspconfig.setup({
-				ensure_installed = servers,
+				ensure_installed = ensure_installed_servers,
 			})
 
 			-- Configure borders for LspInfo UI
