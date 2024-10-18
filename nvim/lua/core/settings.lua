@@ -53,6 +53,9 @@ opt.autoindent = true -- Auto-indent new lines
 opt.smartindent = true -- Smart indent based on code structure
 opt.breakindent = true -- Preserve indent in wrapped lines
 
+opt.wrap = true
+opt.linebreak = true
+
 -- ===========================================
 -- Search Settings
 -- ===========================================

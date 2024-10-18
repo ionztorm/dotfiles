@@ -18,6 +18,19 @@ local M = {}
 map("n", "<leader>q", ":q<CR>", { desc = "Close the current window" })
 map("n", "<leader>w", ":w<CR>", { desc = "Save" })
 
+-- navigation edits
+-- Remap j and k to gj and gk in normal and visual mode
+map("n", "j", "gj", { desc = "Move down visually" })
+map("n", "k", "gk", { desc = "Move up visually" })
+map("v", "j", "gj", { desc = "Move down visually" })
+map("v", "k", "gk", { desc = "Move up visually" })
+
+-- Remap Up and Down to gk and gj
+map("n", "<Up>", "gk", { desc = "Move up visually" })
+map("n", "<Down>", "gj", { desc = "Move down visually" })
+map("v", "<Up>", "gk", { desc = "Move up visually" })
+map("v", "<Down>", "gj", { desc = "Move down visually" })
+
 -- Move lines up and down
 map("n", "<A-Up>", ":m .-2<CR>==", { desc = "Move line up" })
 map("n", "<A-Down>", ":m .+1<CR>==", { desc = "Move line down" })

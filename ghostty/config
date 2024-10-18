@@ -9,7 +9,7 @@ font-thicken = true
 font-size = 15
 adjust-cell-height = 10%
 
- background-opacity = 0.90
+ background-opacity = 0.97
 
 # Cursor style
 cursor-style-blink = true
