@@ -1,0 +1,17 @@
+# visuals
+
+theme = "catppuccin-mocha"
+adjust-cell-height = 10%
+background-opacity = 0.85
+background-blur-radius = 20
+mouse-hide-while-typing = true
+cursor-style-blink = true
+
+# clipboard
+
+clipboard-read = allow
+clipboard-write = allow
+
+
+# Bindings
+keybind = super+shift+x=close_surface
