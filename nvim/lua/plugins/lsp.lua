@@ -3,7 +3,7 @@ return {
   opts = {
     inlay_hints = { enabled = false },
     servers = {
-      biomejs = {},
+      biome = {},
     },
   },
 }
