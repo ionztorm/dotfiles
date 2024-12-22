@@ -9,8 +9,8 @@ background-blur-radius = 20
 mouse-hide-while-typing = true
 cursor-style-blink = true
 font-thicken = true
-# font-family = "JetBrains Mono"
-font-family = "MonoLisa Leon"
+font-family = "JetBrains Mono"
+# font-family = "MonoLisa Leon"
 font-size = 14
 
 # clipboard
