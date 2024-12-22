@@ -1,14 +1,17 @@
 # visuals
 
 theme = "catppuccin-mocha"
+
+# theme = "Horizon"
 adjust-cell-height = 10%
-background-opacity = 0.85
+background-opacity = 0.97
 background-blur-radius = 20
 mouse-hide-while-typing = true
 cursor-style-blink = true
 font-thicken = true
-font-family = "JetBrains Mono"
-font-size = 12
+# font-family = "JetBrains Mono"
+font-family = "MonoLisa Leon"
+font-size = 14
 
 # clipboard
 
