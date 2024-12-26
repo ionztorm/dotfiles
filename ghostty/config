@@ -10,6 +10,7 @@ mouse-hide-while-typing = true
 cursor-style-blink = true
 font-thicken = true
 font-family = "JetBrains Mono"
+font-family = "Geist Mono"
 # font-family = "MonoLisa Leon"
 font-size = 14
 
