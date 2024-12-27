@@ -1,0 +1,53 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+true-color = true
+undercurl = true
+color-modes = true
+popup-border = "all"
+line-number = "relative"
+cursorline = true
+auto-completion = true
+auto-format = true
+text-width = 80
+rulers = [100]
+indent-heuristic = "tree-sitter"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+character = "▏"  #"╎" # "▏", "┆", "┊"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = "↩ "
+
+[editor.lsp]
+display-messages = true
+# display-inlay-hints = true
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+G="goto_file_end"
+C-j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+C-k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"{" = ["goto_next_paragraph"]
+"}" = ["goto_prev_paragraph"]
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+
+[keys.normal.space]
+q = ":quit"
+w = ":write"
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+
+[keys.select]
+"{" = ["goto_next_paragraph"]
+"}" = ["goto_prev_paragraph"]
