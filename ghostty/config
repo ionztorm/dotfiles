@@ -1,6 +1,7 @@
 # visuals
 
-theme = "catppuccin-mocha"
+# theme = "catppuccin-mocha"
+theme = "GruvboxDarkHard"
 
 # theme = "Horizon"
 adjust-cell-height = 10%
@@ -9,16 +10,23 @@ background-blur-radius = 20
 mouse-hide-while-typing = true
 cursor-style-blink = true
 font-thicken = true
-font-family = "JetBrains Mono"
-font-family = "Geist Mono"
-# font-family = "MonoLisa Leon"
-font-size = 14
+# font-family = "JetBrains Mono"
+#font-family = "Geist Mono"
+font-family = "MonoLisa Leon"
+font-size = 13
 
 # clipboard
 
 clipboard-read = allow
 clipboard-write = allow
 
+# MacOS Settings
+macos-option-as-alt = right
 
 # Bindings
+
+# Avoid Zellij conflicts
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
 keybind = super+shift+x=close_surface
