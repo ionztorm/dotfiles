@@ -5,3 +5,4 @@ bu
 testbuild
 envman
 .DS_Store
+*.kdl.bak.*
