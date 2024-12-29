@@ -1,19 +1,21 @@
 # visuals
 
-# theme = "catppuccin-mocha"
-theme = "GruvboxDarkHard"
+theme = "catppuccin-mocha"
+# theme = "GruvboxDarkHard"
+# theme = "tokyonight"
 
 # theme = "Horizon"
 adjust-cell-height = 10%
-background-opacity = 0.90
+background-opacity = 0.80
 background-blur-radius = 20
 mouse-hide-while-typing = true
 cursor-style-blink = true
 font-thicken = true
 # font-family = "JetBrains Mono"
-#font-family = "Geist Mono"
-font-family = "MonoLisa Leon"
-font-size = 13
+# font-family = "Geist Mono"
+# font-family = "MonoLisa Leon"
+font-family = "TX-02"
+font-size = 14
 
 # clipboard
 
@@ -22,6 +24,8 @@ clipboard-write = allow
 
 # MacOS Settings
 macos-option-as-alt = right
+macos-titlebar-style = hidden
+# window-decoration = false
 
 # Bindings
 
