@@ -1,0 +1,5 @@
+keybind = super+shift+x=close_surface
+
+# Avoid Zellij conflicts
+keybind = alt+left=unbind
+keybind = alt+right=unbind
