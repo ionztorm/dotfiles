@@ -1,36 +1,32 @@
-# visuals
+# config files
+config-file = theme/catppuccin-mocha
+config-file = font/berkeley-mono
+config-file = shader/sparks-from-fire 
+config-file = opacity/70
+config-file = keybind/keybinds
 
-theme = "catppuccin-mocha"
-# theme = "GruvboxDarkHard"
-# theme = "tokyonight"
-
-# theme = "Horizon"
+# general
 adjust-cell-height = 10%
-background-opacity = 0.80
-background-blur-radius = 20
 mouse-hide-while-typing = true
 cursor-style-blink = true
-font-thicken = true
-# font-family = "JetBrains Mono"
-# font-family = "Geist Mono"
-# font-family = "MonoLisa Leon"
-font-family = "TX-02"
-font-size = 14
+adjust-underline-position = 8
+adjust-underline-thickness = 2
+auto-update-channel = tip
 
 # clipboard
-
 clipboard-read = allow
 clipboard-write = allow
 
 # MacOS Settings
 macos-option-as-alt = right
 macos-titlebar-style = hidden
-# window-decoration = false
+macos-icon = "custom-style"
+macos-icon-frame = "aluminum"
+macos-icon-ghost-color = "86e1fc"
+macos-icon-screen-color = "222436"
+mouse-hide-while-typing = true
 
-# Bindings
+# Window
 
-# Avoid Zellij conflicts
-keybind = alt+left=unbind
-keybind = alt+right=unbind
-
-keybind = super+shift+x=close_surface
+window-padding-x = 10
+window-padding-y = 10
