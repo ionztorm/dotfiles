@@ -1,4 +1,4 @@
-inherits = "gruvbox_dark_hard"
+inherits = "catppuccin_mocha"
 "ui.background" ={}
 # "ui.linenr" = { fg = "linenr" }
 # "ui.linenr.selected" = { fg = "curlinenr" }
