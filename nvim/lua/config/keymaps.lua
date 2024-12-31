@@ -30,7 +30,7 @@ map("v", "<Up>", "gk", { desc = "Move up visually" })
 map("v", "<Down>", "gj", { desc = "Move down visually" })
 
 -- Move lines up and down
-map("n", "<A-Up>", ":m .-2<CR>==", { desc = "Move line up" })
-map("n", "<A-Down>", ":m .+1<CR>==", { desc = "Move line down" })
-map("x", "<A-Up>", ":move '<-2<CR>gv-gv", { desc = "Move selected lines up" })
-map("x", "<A-Down>", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
+map("n", "<S-Up>", ":m .-2<CR>==", { desc = "Move line up" })
+map("n", "<S-Down>", ":m .+1<CR>==", { desc = "Move line down" })
+map("x", "<S-Up>", ":move '<-2<CR>gv-gv", { desc = "Move selected lines up" })
+map("x", "<S-Down>", ":move '>+1<CR>gv-gv", { desc = "Move selected lines down" })
