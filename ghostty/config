@@ -18,7 +18,7 @@ window-padding-y = 10
 # config files
 config-file = theme/catppuccin-mocha
 config-file = font/berkeley-mono
-# config-file = shader/sparks-from-fire 
+config-file = shader/sparks-from-fire
 config-file = opacity/70
 config-file = keybind/keybinds
 config-file = macos/macos-only
