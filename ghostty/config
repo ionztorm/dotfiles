@@ -1,10 +1,3 @@
-# config files
-config-file = theme/catppuccin-mocha
-config-file = font/berkeley-mono
-config-file = shader/sparks-from-fire 
-config-file = opacity/70
-config-file = keybind/keybinds
-
 # general
 adjust-cell-height = 10%
 mouse-hide-while-typing = true
@@ -17,16 +10,15 @@ auto-update-channel = tip
 clipboard-read = allow
 clipboard-write = allow
 
-# MacOS Settings
-macos-option-as-alt = right
-macos-titlebar-style = hidden
-macos-icon = "custom-style"
-macos-icon-frame = "aluminum"
-macos-icon-ghost-color = "86e1fc"
-macos-icon-screen-color = "222436"
-mouse-hide-while-typing = true
-
 # Window
 
 window-padding-x = 10
 window-padding-y = 10
+
+# config files
+config-file = theme/catppuccin-mocha
+config-file = font/berkeley-mono
+# config-file = shader/sparks-from-fire 
+config-file = opacity/70
+config-file = keybind/keybinds
+config-file = macos/macos-only
