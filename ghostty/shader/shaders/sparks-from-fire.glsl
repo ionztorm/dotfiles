@@ -2,6 +2,12 @@
 
 //Shader License: CC BY 3.0
 //Author: Jan Mróz (jaszunio15)
+//
+
+#ifdef GL_ES
+precision highp float;
+precision highp int;
+#endif
 
 #define SMOKE_INTENSITY_MULTIPLIER 0.9
 #define PARTICLES_ALPHA_MOD 0.9

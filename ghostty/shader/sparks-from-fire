@@ -1,1 +1,1 @@
-custom-shader = shaders/sparks-from-fire.glsl
+custom-shader = ./shaders/sparks-from-fire.glsl
