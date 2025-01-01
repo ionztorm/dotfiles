@@ -8,3 +8,4 @@ adjust-cell-height = 7
 adjust-cursor-height = 7
 adjust-box-thickness = -1
 font-size = 14
+font-thicken = true
