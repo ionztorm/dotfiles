@@ -76,7 +76,7 @@ vec2 noise2_2(vec2 uv)
 float noise1_2(in vec2 uv)
 {
     vec2 f = fract(uv);
-    //vec2 f = smoothstep(0.0, 1.0, fract(uv));
+    // vec2 f = smoothstep(0.0, 1.0, fract(uv));
     
  	vec2 uv00 = floor(uv);
     vec2 uv01 = uv00 + vec2(0,1);
