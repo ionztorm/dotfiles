@@ -5,7 +5,6 @@ return {
 		event = { "BufReadPost", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
-			-- "WhoIsSethDaniel/mason-tool-installer.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"Saghen/blink.cmp",
 		},
@@ -14,12 +13,13 @@ return {
 
 			local mason = require("mason")
 			local lspconfig = require("lspconfig")
+			local masonlspcfg = require("mason-lspconfig")
 			local blink_cmp = require("blink.cmp")
-			local lsps = sennvim.lsps.get_server_names()
+			local lsps = sennvim.lsp.get_server_names()
 			local formatters = sennvim.formatters.get_formatter_names()
 			local linters = sennvim.linters.get_linter_names()
 			local lsp_configs = sennvim.lsp.configs
-			local ensure_installed = sennvim.utilities.combine_tables(lsps, formatters, linters)
+			local ensure_installed = sennvim.utilities.combine_tables(formatters, linters)
 
 			local capabilities = blink_cmp.get_lsp_capabilities()
 			local keymaps = require("core.keymaps").lsp
@@ -32,6 +32,10 @@ return {
 				ui = {
 					border = "rounded",
 				},
+			})
+
+			masonlspcfg.setup({
+				ensure_installed = lsps,
 			})
 
 			sennvim.utilities.mason_ensure_installed(ensure_installed)

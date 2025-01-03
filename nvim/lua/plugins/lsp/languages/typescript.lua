@@ -28,6 +28,7 @@ return function()
 	sennvim.formatters.add_formatter("typescriptreact", { "biome" })
 	sennvim.formatters.add_formatter("javascript", { "biome" })
 	sennvim.formatters.add_formatter("javascriptreact", { "biome" })
+
 	sennvim.formatters.add_formatter_config("biome", { prepend_args = { "check", "--unsafe", "--write" } })
 
 	sennvim.linters.add_linter("typescript", { "biome", "eslint_d" })

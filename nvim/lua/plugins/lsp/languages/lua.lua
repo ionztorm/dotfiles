@@ -22,4 +22,3 @@ return function()
 
 	sennvim.formatters.add_formatter("lua", { "stylua" })
 end
-
