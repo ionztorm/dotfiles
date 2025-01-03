@@ -5,24 +5,21 @@ return {
 		event = { "BufReadPost", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
+			-- "WhoIsSethDaniel/mason-tool-installer.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"Saghen/blink.cmp",
-			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
 		config = function()
-			local mason = require("mason")
-			local mason_lspconfig = require("mason-lspconfig")
-			local mason_tool_installer = require("mason-tool-installer")
-			local lspconfig = require("lspconfig")
-			local blink_cmp = require("blink.cmp")
-
 			sennvim.lsp.load_language_configs()
 
-			local servers = sennvim.lsp.get_server_names()
+			local mason = require("mason")
+			local lspconfig = require("lspconfig")
+			local blink_cmp = require("blink.cmp")
+			local lsps = sennvim.lsps.get_server_names()
 			local formatters = sennvim.formatters.get_formatter_names()
 			local linters = sennvim.linters.get_linter_names()
 			local lsp_configs = sennvim.lsp.configs
-			local ensure_installed = sennvim.utilities.combine_tables(servers, formatters, linters)
+			local ensure_installed = sennvim.utilities.combine_tables(lsps, formatters, linters)
 
 			local capabilities = blink_cmp.get_lsp_capabilities()
 			local keymaps = require("core.keymaps").lsp
@@ -31,20 +28,13 @@ return {
 			end
 
 			mason.setup({
+				ensure_installed = ensure_installed,
 				ui = {
 					border = "rounded",
 				},
 			})
 
-			mason_lspconfig.setup({ ensure_installed = servers })
-
-			mason_tool_installer.setup({
-				auto_update = true,
-				run_on_start = true,
-				start_delay = 3000,
-				debounce_hours = 12,
-				ensure_installed = ensure_installed,
-			})
+			sennvim.utilities.mason_ensure_installed(ensure_installed)
 
 			for server, config in pairs(lsp_configs) do
 				config.on_attach = on_attach
@@ -68,12 +58,12 @@ return {
 		opts = {
 			notify_on_error = false,
 			format_on_save = {
-				timeout_ms = 5000,
+				timeout_ms = 500,
 				lsp_format = "fallback",
 			},
 			default_format_opts = {
 				async = true,
-				timeout_ms = 5000,
+				timeout_ms = 500,
 				lsp_format = "fallback",
 			},
 			formatters = sennvim.formatters.get_formatter_configs(),

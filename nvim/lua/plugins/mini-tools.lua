@@ -1,32 +1,33 @@
 return {
-    {
-        'echasnovski/mini.nvim',
-        config = function()
-            local statusline = require('mini.statusline')
-            local pairs = require('mini.pairs')
-            local indentscope = require('mini.indentscope')
-            local cursorword = require('mini.cursorword')
-            local hipatterns = require('mini.hipatterns')
+	{
+		"echasnovski/mini.nvim",
+		config = function()
+			local statusline = require("mini.statusline")
+			local pairs = require("mini.pairs")
+			local indentscope = require("mini.indentscope")
+			local cursorword = require("mini.cursorword")
+			local hipatterns = require("mini.hipatterns")
+			local ai = require("mini.ai")
 
-
-            statusline.setup { use_icons = true }
-            pairs.setup({
-                modes = { insert = true, command = true, terminal = false },
-                skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
-                skip_ts = { "string" },
-                skip_unbalanced = true,
-                markdown = true,
-            })
-            indentscope.setup({
-                symbol = "│",
-                options = { try_as_border = true },
-            })
-            cursorword.setup()
-            hipatterns.setup({
-                highlighters = {
-                    hex_color = hipatterns.gen_highlighter.hex_color(),
-                },
-            })
-        end
-    },
+			statusline.setup({ use_icons = true })
+			ai.setup({ n_lines = 500 })
+			pairs.setup({
+				modes = { insert = true, command = true, terminal = false },
+				skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+				skip_ts = { "string" },
+				skip_unbalanced = true,
+				markdown = true,
+			})
+			indentscope.setup({
+				symbol = "│",
+				options = { try_as_border = true },
+			})
+			cursorword.setup()
+			hipatterns.setup({
+				highlighters = {
+					hex_color = hipatterns.gen_highlighter.hex_color(),
+				},
+			})
+		end,
+	},
 }
