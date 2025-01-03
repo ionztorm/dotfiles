@@ -37,17 +37,21 @@ opt.splitright = true -- Vertical splits open to the right
 opt.splitbelow = true -- Horizontal splits open below
 opt.splitkeep = "cursor" -- Keep cursor centered during splits
 opt.hlsearch = true -- Highlight search matches
+opt.signcolumn = "yes" -- Show sign column
 
 -- ===========================================
 -- Indentation Settings
 -- ===========================================
 opt.expandtab = true -- Convert tabs to spaces
-opt.smarttab = true -- Smart tab behavior
+-- opt.smarttab = true -- Smart tab behavior
 opt.shiftwidth = 4 -- Indent by 4 spaces
 opt.tabstop = 4 -- Tab width is 4 spaces
 opt.autoindent = true -- Auto-indent new lines
 opt.smartindent = true -- Smart indent based on code structure
 opt.breakindent = true -- Preserve indent in wrapped lines
+opt.list = true -- Show whitespace characters
+opt.listchars:append("tab:· ")
+opt.listchars:append("space:·") -- Use a centered dot for spaces
 
 -- ===========================================
 -- Scrolling and Cursor Settings
@@ -69,7 +73,7 @@ opt.updatetime = 300 -- Faster completion time (default 4000ms)
 -- ===========================================
 -- Syntax and Highlighting
 -- ===========================================
-cmd("syntax on") -- Enable syntax highlighting
+cmd.syntax = "enable" -- Enable syntax highlighting
 
 -- ===========================================
 -- Matching Settings
