@@ -46,8 +46,8 @@ map("n", "<C-l>", "<C-w>l", { desc = "Move to the pane on the right" })
 -- lazygit
 map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open LazyGit" })
 
--- neotree
-map("n", "<leader>ee", ":Neotree toggle<CR>", { desc = "Togglu Neotree" })
+-- neotree / mini.files
+map("n", "<leader>ee", ":lua MiniFiles.open()<CR>", { desc = "Togglu MiniFiles" })
 
 --Fzf Maps
 -- local builtin = require("telescope.builtin")

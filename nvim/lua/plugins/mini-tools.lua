@@ -8,7 +8,9 @@ return {
 			local cursorword = require("mini.cursorword")
 			local hipatterns = require("mini.hipatterns")
 			local ai = require("mini.ai")
+			local files = require("mini.files")
 
+			files.setup({})
 			statusline.setup({ use_icons = true })
 			ai.setup({ n_lines = 500 })
 			pairs.setup({
