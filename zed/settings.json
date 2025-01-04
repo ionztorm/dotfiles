@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "inline_completions": {
+    "disabled_globs": [".env", "main.py"]
+  },
   "ui_font_size": 13,
   "buffer_font_size": 13,
   "ui_font_family": "TX-02",
@@ -15,6 +18,10 @@
     "mode": "system",
     "light": "Tokyo Night",
     "dark": "Tokyo Night"
+  },
+
+  "tab_bar": {
+    "show": false
   },
   "vim_mode": true,
   "experimental.theme_overrides": {

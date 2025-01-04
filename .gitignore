@@ -7,3 +7,5 @@ envman
 .DS_Store
 *.kdl.bak.*
 backups
+zed/prompts/prompts-library-db.0.mdb/lock.mdb
+nvim/lazy-lock.json
