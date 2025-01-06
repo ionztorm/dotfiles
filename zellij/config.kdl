@@ -54,6 +54,8 @@ keybinds clear-defaults=true {
         bind "t" { SwitchToMode "normal"; }
         bind "x" { CloseTab; SwitchToMode "locked"; }
         bind "tab" { ToggleTab; }
+        bind "Alt left" { MoveTab "left";}
+        bind "Alt right" { MoveTab "right";}
     }
     resize {
         bind "left" { Resize "Increase left"; }
