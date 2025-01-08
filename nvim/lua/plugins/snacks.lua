@@ -6,16 +6,16 @@ return {
 		input = {
 			enabled = true,
 		},
-		dim = {
-			enabled = true,
-		},
-		scroll = {
-			enabled = true,
-		},
-		notifier = {
-			enabled = true,
-			timeout = 3000, -- default timeout in ms
-		},
+		-- dim = {
+		-- 	enabled = true,
+		-- },
+		-- scroll = {
+		-- 	enabled = true,
+		-- },
+		-- notifier = {
+		-- 	enabled = true,
+		-- 	timeout = 3000, -- default timeout in ms
+		-- },
 	},
 
 	config = function(_, opts)

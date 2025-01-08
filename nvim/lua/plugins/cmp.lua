@@ -117,7 +117,7 @@ return {
 		completion = {
 			menu = { border = "rounded" },
 			documentation = { window = { border = "rounded" }, auto_show = true, auto_show_delay_ms = 500 },
-			list = { selection = "auto_insert" },
+			list = { selection = { auto_insert = true } },
 			ghost_text = { enabled = true },
 		},
 
