@@ -1,0 +1,64 @@
+# ========================================
+# Language Servers
+# ========================================
+
+# JSON -----------------------------------
+
+[language-server.vscode-json]
+command = "vscode-json-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-json-language-server.config]
+json = { validate = { enable = true }, format = { enable = true } }
+provideFormatter = true
+
+# Frontend 🤮 ----------------------------
+
+[language-server]
+emmet-ls = { command = "emmet-ls", args = [ "--stdio" ]}
+
+[language-server.tailwindcss]
+command = "tailwind-css-language-server"
+args = ["--stdio"]
+
+[language-server.vscode-css-language-server.config]
+css = { validate = { enable = true } }
+scss = { validate = { enable = true } }
+less = { validate = { enable = true } }
+provideFormatter = true
+
+
+# ========================================
+# Golang ---------------------------------
+# ========================================
+
+[[language]]
+name = "go"
+auto-format = true
+
+[[language]]
+name = "templ"
+auto-format = true
+
+# ========================================
+# Python ---------------------------------
+# ========================================
+
+
+# ========================================
+# JS/TS ----------------------------------
+# ========================================
+
+[[language]]
+
+
+
+# ========================================
+# Prisma ---------------------------------
+# ========================================
+
+[[language]]
+name = "prisma"
+language-servers = ["prisma-language-server"]
+auto-format = true
+
