@@ -27,6 +27,42 @@ scss = { validate = { enable = true } }
 less = { validate = { enable = true } }
 provideFormatter = true
 
+# Python 🐍 ------------------------------
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+# except-features = ["format", "code-action"]
+
+[language-server.basedpyright.config.basedpyright.analysis]
+autoSearchPaths = true
+typeCheckingMode = "basic"
+diagnosticMode = "openFilesOnly"
+autoImportCompletions = true
+
+[language-server.ruff]
+command = "ruff"
+args = ["server", "--preview"]
+environment = { "RUFF_TRACE" = "messages" }
+
+[language-server.ruff.config.settings]
+lineLength = 100
+logLevel = "debug"
+
+[language-server.ruff.config.settings.lint]
+select = ["E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "W", "D", "UP", "ANN", "ASYNC", "S", "RET", "TCH", "ARG", "PTH", "DOC"]
+preview = true
+
+[language-server.ruff.config.settings.format]
+preview = true
+quote-style = "double"
+docstring-code-format = true
+indent-style = "space"
+
+[language-server.pylsp.config.pylsp]
+plugins.ruff.enabled = true
+plugins.black.enabled = false
+
 
 # ========================================
 # Golang ---------------------------------
@@ -44,13 +80,21 @@ auto-format = true
 # Python ---------------------------------
 # ========================================
 
+[[language]]
+name = "python"
+language-id = "python"
+roots = ["pyproject.toml", "poetry.lock", ".git", ".venv/"]
+language-servers = ["ruff", "basedpyright"]
+# formatter = { command = "ruff", args = ["format", "-" ] }
+formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
+file-types = ["py", "ipynb"]
+comment-token = "#"
+shebangs = ["python"]
+auto-format = true
 
 # ========================================
 # JS/TS ----------------------------------
 # ========================================
-
-[[language]]
-
 
 
 # ========================================
@@ -62,3 +106,10 @@ name = "prisma"
 language-servers = ["prisma-language-server"]
 auto-format = true
 
+# ========================================
+# Markdown -------------------------------
+# ========================================
+
+[[language]]
+name = "markdown"
+indent = { tab-width = 4, unit = 4 }

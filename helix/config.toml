@@ -27,6 +27,9 @@ render = true
 skip-levels = 1
 character = "▏"  #"╎" # "▏", "┆", "┊"
 
+[editor.whitespace]
+render = "all"
+
 [editor.soft-wrap]
 enable = true
 wrap-indicator = "↩ "

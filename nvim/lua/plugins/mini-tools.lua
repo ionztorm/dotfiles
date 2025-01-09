@@ -3,6 +3,7 @@ return {
 		"echasnovski/mini.nvim",
 		config = function()
 			local statusline = require("mini.statusline")
+			local icons = require("mini.icons")
 			local pairs = require("mini.pairs")
 			local indentscope = require("mini.indentscope")
 			local cursorword = require("mini.cursorword")
@@ -37,6 +38,7 @@ return {
 
 			-- setupss
 			files.setup({})
+			icons.setup({})
 			statusline.setup({ use_icons = true, content = { active = content_active } })
 			ai.setup({ n_lines = 500 })
 			pairs.setup({
