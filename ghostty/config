@@ -16,7 +16,7 @@ window-padding-x = 10
 window-padding-y = 10
 
 # config files
-config-file = ./theme/catppuccin-macchiato
+config-file = ./theme/tokyonight-storm
 config-file = ./font/berkeley-mono
 # config-file = ./shader/retro
 # config-file = ./shader/test

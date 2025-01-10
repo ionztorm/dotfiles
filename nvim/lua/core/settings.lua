@@ -10,6 +10,7 @@ _G.sennvim = require("utils")
 local g = vim.g -- Shorten vim.g to g
 local opt = vim.opt -- Shorten vim.opt to opt
 local cmd = vim.cmd -- Shorten vim.cmd to cmd
+local api = vim.api -- Shorten vim.api to api
 
 -- ===========================================
 -- For neotree - hides netrw
@@ -32,12 +33,16 @@ opt.showcmd = true -- Show command in the bottom bar
 opt.number = true -- Enable line numbers
 opt.relativenumber = true -- Relative line numbers
 opt.cursorline = true -- Highlight the current line
+opt.cursorcolumn = true -- Highlight the current column
+opt.colorcolumn = "80,100,120"
+-- cmd([[highlight ColorColumn ctermbg=lightgrey guibg=#47215F]])
 opt.fillchars = { eob = " " } -- Hide tildes on empty lines
 opt.splitright = true -- Vertical splits open to the right
 opt.splitbelow = true -- Horizontal splits open below
 opt.splitkeep = "cursor" -- Keep cursor centered during splits
 opt.hlsearch = true -- Highlight search matches
 opt.signcolumn = "yes" -- Show sign column
+opt.cmdheight = 0 -- hides the command line when not in use
 
 -- ===========================================
 -- Indentation Settings
