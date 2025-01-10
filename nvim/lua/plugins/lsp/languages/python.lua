@@ -1,5 +1,90 @@
 return function()
-	sennvim.lsp.add_config("pyright", {})
+	sennvim.lsp.add_config("basedpyright", {
+		settings = {
+			basedpyright = {
+				typeCheckingMode = "basic",
+				autoImportCompletions = true,
+			},
+		},
+	})
+	sennvim.lsp.add_config("ruff", {
+		init_options = {
+			settings = {
+				configuration = "~/.config/ruff/ruff.toml",
+				configurationPreference = "editorFirst",
+				exclude = {
+					".bzr",
+					".direnv",
+					".eggs",
+					".git",
+					".git-rewrite",
+					".hg",
+					".ipynb_checkpoints",
+					".mypy_cache",
+					".nox",
+					".pants.d",
+					".pyenv",
+					".pytest_cache",
+					".pytype",
+					".ruff_cache",
+					".svn",
+					".tox",
+					".venv",
+					".vscode",
+					"__pypackages__",
+					"_build",
+					"buck-out",
+					"build",
+					"dist",
+					"node_modules",
+					"site-packages",
+					"venv",
+				},
+				lineLength = 100,
+				fixAll = true,
+				organizeImports = true,
+				syntaxErrors = true,
+				logLevel = "info",
+				codeAction = {
+					disableRuleComment = { enable = true },
+					fixViolation = { enable = true },
+				},
+				lint = {
+					preview = true,
+					enable = true,
+					select = {
+						"E",
+						"F",
+						"W",
+						"B",
+						"I",
+						"RUF",
+						"N",
+						"LOG",
+						"ERA",
+						"D",
+						"UP",
+						"ANN",
+						"ASYNC",
+						"S",
+						"RET",
+						"TCH",
+						"ARG",
+						"PTH",
+						"DOC",
+					},
+				},
+				format = {
+					preview = true,
+					enable = true,
+					lineLength = 100,
+					quoteStyle = "double",
+					indentStyle = "space",
+					docStringCodeFormat = true,
+				},
+			},
+		},
+	})
 	sennvim.linters.add_linter("python", { "ruff" })
 	sennvim.formatters.add_formatter("python", { "ruff" })
 end
