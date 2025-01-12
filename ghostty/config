@@ -16,14 +16,8 @@ window-padding-x = 10
 window-padding-y = 10
 
 # config files
-config-file = ./theme/tokyonight-storm
+config-file = ./theme/catppuccin-mocha
 config-file = ./font/berkeley-mono
-# config-file = ./shader/retro
-# config-file = ./shader/test
-# config-file = ./shader/sparks-from-fire
-# config-file = ./shader/the-matrix
-# config-file = ./shader/better-crt
-# config-file = ./shader/glitchy
 config-file = ./opacity/90
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only

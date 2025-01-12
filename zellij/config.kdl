@@ -248,8 +248,8 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "tokyo-night-storm"
-// theme "catppuccin-macchiato"
+// theme "tokyo-night-storm"
+theme "catppuccin-mocha"
 // theme "kanagawa"
 // theme "gruvbox-dark"
 
