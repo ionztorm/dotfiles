@@ -54,9 +54,9 @@ opt.tabstop = 4 -- Tab width is 4 spaces
 opt.autoindent = true -- Auto-indent new lines
 opt.smartindent = true -- Smart indent based on code structure
 opt.breakindent = true -- Preserve indent in wrapped lines
-opt.list = true -- Show whitespace characters
-opt.listchars:append("tab:· ")
-opt.listchars:append("space:·") -- Use a centered dot for spaces
+-- opt.list = true -- Show whitespace characters
+-- opt.listchars:append("tab:· ")
+-- opt.listchars:append("space:·") -- Use a centered dot for spaces
 
 -- ===========================================
 -- Scrolling and Cursor Settings
