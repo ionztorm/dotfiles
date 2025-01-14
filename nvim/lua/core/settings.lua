@@ -33,8 +33,8 @@ opt.showcmd = true -- Show command in the bottom bar
 opt.number = true -- Enable line numbers
 opt.relativenumber = true -- Relative line numbers
 opt.cursorline = true -- Highlight the current line
-opt.cursorcolumn = true -- Highlight the current column
-opt.colorcolumn = "80,100,120"
+-- opt.cursorcolumn = true -- Highlight the current column
+opt.colorcolumn = "100"
 -- cmd([[highlight ColorColumn ctermbg=lightgrey guibg=#47215F]])
 opt.fillchars = { eob = " " } -- Hide tildes on empty lines
 opt.splitright = true -- Vertical splits open to the right

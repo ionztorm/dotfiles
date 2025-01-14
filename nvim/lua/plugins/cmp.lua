@@ -5,7 +5,7 @@ return {
 	version = "v0.*",
 	opts = {
 		sources = {
-			default = { "copilot", "lsp", "path", "snippets", "buffer", "markdown" },
+			default = { "copilot", "lsp", "path", "snippets", "markdown" },
 			cmdline = function()
 				local type = vim.fn.getcmdtype()
 				-- Search forward and backward
