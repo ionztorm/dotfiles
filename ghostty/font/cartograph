@@ -5,3 +5,5 @@ font-style-italic = Light Italic
 font-style-bold-italic = Heavy Italic
 adjust-cell-height = 8
 adjust-cursor-height = 8
+font-thicken = true
+font-size = 15

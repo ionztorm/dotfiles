@@ -5,7 +5,7 @@ return {
 	version = "v0.*",
 	opts = {
 		sources = {
-			default = { "copilot", "lsp", "path", "snippets", "markdown" },
+			default = { "copilot", "lsp", "path", "snippets", "buffer", "markdown" },
 			cmdline = function()
 				local type = vim.fn.getcmdtype()
 				-- Search forward and backward
@@ -20,11 +20,11 @@ return {
 			end,
 			providers = {
 				lsp = {
-					min_keyword_length = 2,
+					min_keyword_length = 0,
 					score_offset = 0,
 				},
 				path = {
-					min_keyword_length = 0,
+					min_keyword_length = 1,
 				},
 				snippets = {
 					min_keyword_length = 2,
