@@ -17,7 +17,7 @@ window-padding-y = 2
 
 # config files
 config-file = ./theme/github-dark-dimmed
-config-file = ./font/monolisa
+config-file = ./font/berkeley-mono
 config-file = ./opacity/70
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only
