@@ -63,6 +63,10 @@ map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "Fzf Buffers" })
 map("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "Fzf Help" })
 map("n", "<leader>fc", require("fzf-lua").git_bcommits, { desc = "Fzf Git Commits" })
 
+-- live server
+
+map("n", "<leader>ls", ":LiveServerToggle<CR>", { desc = "Start live server" })
+
 -- lsp
 
 local M = {}

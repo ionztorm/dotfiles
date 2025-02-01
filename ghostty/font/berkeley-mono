@@ -7,5 +7,5 @@ font-feature = ss02
 adjust-cell-height = 7
 adjust-cursor-height = 7
 adjust-box-thickness = -1
-font-size = 16
+font-size = 15
 font-thicken = true

@@ -34,8 +34,22 @@ indent-width = 4
 [lint]
 select = [
     "E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "D", "UP",
-    "ANN", "ASYNC", "S", "RET", "TCH", "ARG", "PTH", "DOC"
+    "ANN", "ASYNC", "S", "RET", "TCH", "ARG", "PTH"
 ]
+ignore = [
+    "D203", "D213"
+]
+# Enable automatic fixing of issues
+fixable  = ["ALL"]
+
+# [lint.isort]
+# case-sensitive = true
+# order-by-type = true
+# combine-as-imports = true
+# length-sort = true
+# lines-between-types = 1
+# no-sections = false
+
 
 [format]
 quote-style = "double"
@@ -44,4 +58,8 @@ line-ending = "auto"
 docstring-code-format = true
 docstring-code-line-length = "dynamic"
 
-
+# [isort]
+# combine-as-imports = true
+# force-single-line = false
+# sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+# default-section = "THIRDPARTY"

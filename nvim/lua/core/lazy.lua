@@ -17,26 +17,26 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	spec = {
-		{
-			"Shatur/neovim-ayu",
-			config = function()
-				require("ayu").setup({
-					mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
-					terminal = true, -- Set to `false` to let terminal manage its own colors.
-					overrides = {
-						Normal = { bg = "None" },
-						NormalFloat = { bg = "none" },
-						SignColumn = { bg = "None" },
-						Folded = { bg = "None" },
-						FoldColumn = { bg = "None" },
-						CursorLine = { bg = "None" },
-						CursorColumn = { bg = "None" },
-						VertSplit = { bg = "None" },
-					}, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
-				})
-				vim.cmd("colorscheme ayu")
-			end,
-		},
+		-- {
+		-- 	"Shatur/neovim-ayu",
+		-- 	config = function()
+		-- 		require("ayu").setup({
+		-- 			mirage = true, -- Set to `true` to use `mirage` variant instead of `dark` for dark background.
+		-- 			terminal = true, -- Set to `false` to let terminal manage its own colors.
+		-- 			overrides = {
+		-- 				Normal = { bg = "None" },
+		-- 				NormalFloat = { bg = "none" },
+		-- 				SignColumn = { bg = "None" },
+		-- 				Folded = { bg = "None" },
+		-- 				FoldColumn = { bg = "None" },
+		-- 				CursorLine = { bg = "None" },
+		-- 				CursorColumn = { bg = "None" },
+		-- 				VertSplit = { bg = "None" },
+		-- 			}, -- A dictionary of group names, each associated with a dictionary of parameters (`bg`, `fg`, `sp` and `style`) and colors in hex.
+		-- 		})
+		-- 		vim.cmd("colorscheme ayu")
+		-- 	end,
+		-- },
 		-- {
 		-- 	"projekt0n/github-nvim-theme",
 		-- 	name = "github-theme",
@@ -52,33 +52,33 @@ require("lazy").setup({
 		-- 		vim.cmd("colorscheme github_dark_dimmed")
 		-- 	end,
 		-- },
-		-- {
-		-- 	"folke/tokyonight.nvim",
-		-- 	lazy = false,
-		-- 	priority = 1000,
-		-- 	config = function()
-		-- 		require("tokyonight").setup({
-		-- 			style = "storm",
-		-- 			transparent = true,
-		-- 			terminal_colors = true,
-		-- 			styles = {
-		-- 				floats = "transparent",
-		-- 				sidebars = "transparent",
-		-- 				comments = { italic = false },
-		-- 				keywords = { italic = false },
-		-- 				variables = { bold = true },
-		-- 			},
-		-- 			on_highlights = function(highlights, colors)
-		-- 				highlights.ColorColumn = { bg = "#46215F" }
-		-- 				-- highlights.RenderMarkdownCode = { bg = "NONE" }
-		-- 			end,
-		-- 			dim_inactive = true,
-		-- 		})
-		-- 		vim.cmd.colorscheme("tokyonight")
-		--
-		-- 		-- vim.cmd([[highlight ColorColumn ctermbg=lightgrey guibg=#47215F]])
-		-- 	end,
-		-- },
+		{
+			"folke/tokyonight.nvim",
+			lazy = false,
+			priority = 1000,
+			config = function()
+				require("tokyonight").setup({
+					style = "storm",
+					transparent = true,
+					terminal_colors = true,
+					styles = {
+						floats = "transparent",
+						sidebars = "transparent",
+						comments = { italic = false },
+						keywords = { italic = false },
+						variables = { bold = true },
+					},
+					on_highlights = function(highlights, colors)
+						highlights.ColorColumn = { bg = "#46215F" }
+						-- highlights.RenderMarkdownCode = { bg = "NONE" }
+					end,
+					dim_inactive = true,
+				})
+				vim.cmd.colorscheme("tokyonight")
+
+				-- vim.cmd([[highlight ColorColumn ctermbg=lightgrey guibg=#47215F]])
+			end,
+		},
 		-- {
 		-- 	"ellisonleao/gruvbox.nvim",
 		-- 	priority = 1000,
