@@ -1,8 +1,10 @@
 return {
-	"barrett-ruth/live-server.nvim",
-	bulid = "npm add -g live-server",
-	cmd = { "LiveServerStart", "LiveServerStop", "LiveServerToggle" },
+	"brianhuster/live-preview.nvim",
+	dependencies = {
+		-- You can choose one of the following pickers
+		"ibhagwan/fzf-lua",
+	},
 	config = function()
-		require("live-server").setup({})
+		require("livepreview.config").set({})
 	end,
 }
