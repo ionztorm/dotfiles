@@ -3,7 +3,7 @@ local common_opts = { noremap = true, silent = true }
 
 -- Utility function for setting key mappings
 local function map(mode, lhs, rhs, opts)
-	opts = opts or {} -- Default to an empty table if no options are provided
+	opts = opts or {}
 	for k, v in pairs(common_opts) do
 		if opts[k] == nil then
 			opts[k] = v

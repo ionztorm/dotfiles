@@ -2,10 +2,14 @@ return {
 	"folke/trouble.nvim",
 	cmd = { "Trouble" },
 	opts = {
+		focus = true,
 		modes = {
 			lsp = {
 				win = { position = "right" },
 			},
+		},
+		keys = {
+			["<cr>"] = "jump_close",
 		},
 	},
 	keys = {
