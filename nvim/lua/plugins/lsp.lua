@@ -21,9 +21,9 @@ return {
 			local lsp_configs = sennvim.lsp.configs
 			local ensure_installed = sennvim.utilities.combine_tables(formatters, linters)
 
-			-- local capabilities = blink_cmp.get_lsp_capabilities()
-			local capabilities = vim.lsp.protocol.make_client_capabilities()
-			capabilities = vim.tbl_deep_extend("force", capabilities, blink_cmp.get_lsp_capabilities())
+			local capabilities = blink_cmp.get_lsp_capabilities()
+			-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+			-- capabilities = vim.tbl_deep_extend("force", capabilities, blink_cmp.get_lsp_capabilities())
 
 			local keymaps = require("core.keymaps").lsp
 			local on_attach = function(_, bufnr)
@@ -46,15 +46,23 @@ return {
 			for server, config in pairs(lsp_configs) do
 				config.on_attach = on_attach
 				config.capabilities = vim.tbl_deep_extend("force", capabilities, config.capabilities or {})
-				lspconfig[server].setup({
+
+				local first_key, first_value = next(config)
+
+				local lsp_setup = {
 					autostart = config.autostart,
 					cmd = config.cmd,
 					capabilities = capabilities,
 					filetypes = config.filetypes,
 					on_attach = on_attach,
-					settings = config.settings,
 					root_dir = config.root_dir,
-				})
+				}
+
+				if first_key and first_value then
+					lsp_setup[first_key] = first_value
+				end
+
+				lspconfig[server].setup(lsp_setup)
 			end
 		end,
 	},

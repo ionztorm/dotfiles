@@ -42,13 +42,13 @@ ignore = [
 # Enable automatic fixing of issues
 fixable  = ["ALL"]
 
-# [lint.isort]
-# case-sensitive = true
-# order-by-type = true
-# combine-as-imports = true
-# length-sort = true
-# lines-between-types = 1
-# no-sections = false
+[lint.isort]
+case-sensitive = true
+order-by-type = true
+combine-as-imports = true
+length-sort = true
+lines-between-types = 1
+no-sections = false
 
 
 [format]

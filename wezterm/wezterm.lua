@@ -12,18 +12,17 @@ config.font_size = 15.0
 config.line_height = 1.3
 
 config.window_padding = {
-	left = 10,
-	right = 10,
-	top = 10,
-	bottom = 10,
+	left = 5,
+	right = 5,
+	top = 5,
+	bottom = 5,
 }
 config.native_macos_fullscreen_mode = true
-config.window_background_opacity = 0.3
-config.macos_window_background_blur = 20
+config.window_background_opacity = 1
+-- config.macos_window_background_blur = 20
 config.hide_tab_bar_if_only_one_tab = true
-config.window_decorations = "NONE"
+-- config.window_decorations = "NONE"
 config.enable_scroll_bar = false
-config.color_scheme = "Catppuccin Macchiato"
-config.window_background_opacity = 0.7
+config.color_scheme = "Tokyo Night"
 
 return config

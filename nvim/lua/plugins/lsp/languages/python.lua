@@ -12,14 +12,15 @@ return function()
 		init_options = {
 			settings = {
 				configuration = "~/.config/ruff/ruff.toml",
+				logLevel = "debug",
 			},
 		},
 	})
 	-- sennvim.linters.add_linter("python", { "ruff" })
-	-- sennvim.formatters.add_formatter("python", { "ruff" })
-	-- sennvim.formatters.add_formatter_config("ruff", {
-	-- 	command = "ruff",
-	-- 	args = { "--fix", "--stdin-filename", "%:p", "-" },
-	-- 	stdin = true,
-	-- })
+	sennvim.formatters.add_formatter("python", { "ruff" })
+	sennvim.formatters.add_formatter_config("ruff", {
+		command = "ruff",
+		args = { "--fix", "--stdin-filename", "%:p", "-" },
+		stdin = true,
+	})
 end
