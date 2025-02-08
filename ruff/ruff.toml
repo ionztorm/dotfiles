@@ -33,9 +33,10 @@ indent-width = 4
 
 [lint]
 select = [
-    "E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "D", "UP",
+    "E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "UP",
     "ANN", "ASYNC", "S", "RET", "TCH", "ARG", "PTH"
 ]
+# "D"
 ignore = [
     "D203", "D213"
 ]

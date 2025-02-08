@@ -21,9 +21,9 @@ return {
 			local lsp_configs = sennvim.lsp.configs
 			local ensure_installed = sennvim.utilities.combine_tables(formatters, linters)
 
-			local capabilities = blink_cmp.get_lsp_capabilities()
-			-- local capabilities = vim.lsp.protocol.make_client_capabilities()
-			-- capabilities = vim.tbl_deep_extend("force", capabilities, blink_cmp.get_lsp_capabilities())
+			-- local capabilities = blink_cmp.get_lsp_capabilities()
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities = vim.tbl_deep_extend("force", capabilities, blink_cmp.get_lsp_capabilities())
 
 			local keymaps = require("core.keymaps").lsp
 			local on_attach = function(_, bufnr)
