@@ -36,7 +36,7 @@ end
 -- lsploader.load_language_configs()
 -- Automatically loads language configurations from the predefined directory.
 function M.load_language_configs()
-    local base_path = "plugins.lsp.languages" -- Base module path for the language configs
+    local base_path = "config.languages" -- Base module path for the language configs
     local lua_path = vim.fn.stdpath("config") .. "/lua/" .. base_path:gsub("%.", "/") -- Actual file path
     local files = vim.fn.glob(lua_path .. "/*.lua", false, true) -- Find all .lua files
 
@@ -52,3 +52,4 @@ function M.load_language_configs()
 end
 
 return M
+

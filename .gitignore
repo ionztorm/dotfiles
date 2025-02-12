@@ -12,3 +12,4 @@ nvim/lazy-lock.json
 sennvim
 helix/runtime/grammars/sources
 raycast/extensions
+nvtest

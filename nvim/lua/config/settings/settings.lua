@@ -2,7 +2,7 @@
 -- Set some globals
 -- ===========================================
 
-_G.sennvim = require("utils")
+-- _G.sennvim = require("utils")
 
 -- ===========================================
 -- Shortcuts for Vim API
@@ -15,8 +15,8 @@ local api = vim.api -- Shorten vim.api to api
 -- ===========================================
 -- For neotree - hides netrw
 -- ===========================================
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
 
 -- ===========================================
 -- Leader Key Settings
@@ -43,6 +43,7 @@ opt.splitkeep = "cursor" -- Keep cursor centered during splits
 opt.hlsearch = true -- Highlight search matches
 opt.signcolumn = "yes" -- Show sign column
 opt.cmdheight = 0 -- hides the command line when not in use
+opt.shortmess:append("W")
 
 -- ===========================================
 -- Indentation Settings
@@ -56,7 +57,7 @@ opt.smartindent = true -- Smart indent based on code structure
 opt.breakindent = true -- Preserve indent in wrapped lines
 -- opt.list = true -- Show whitespace characters
 -- opt.listchars:append("tab:· ")
--- opt.listchars:append("space:·") -- Use a centered dot for spaces
+opt.listchars:append("space:·") -- Use a centered dot for spaces
 
 -- ===========================================
 -- Scrolling and Cursor Settings

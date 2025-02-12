@@ -21,3 +21,4 @@ M.get_linter_names = function()
 end
 
 return M
+

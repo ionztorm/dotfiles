@@ -1,7 +1,5 @@
--- Define common keymap options
 local common_opts = { noremap = true, silent = true }
 
--- Utility function for setting key mappings
 local function map(mode, lhs, rhs, opts)
 	opts = opts or {}
 	for k, v in pairs(common_opts) do
@@ -43,25 +41,24 @@ map("n", "<C-j>", "<C-w>j", { desc = "Move to the pane below" })
 map("n", "<C-k>", "<C-w>k", { desc = "Move to the pane above" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move to the pane on the right" })
 
--- LivePreviewToggle
-
-map("n", "<leader>ls", function()
-	sennvim.utilities.toggle_live_preview()
-end, { desc = "Toggle LivePreview" })
-
 -- lazygit
 map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open LazyGit" })
 
 -- neotree / mini.files
 map("n", "<leader>ee", ":lua MiniFiles.open()<CR>", { desc = "Togglu MiniFiles" })
 
-map("n", "<leader>ff", require("fzf-lua").files, { desc = "Fzf Files" })
-map("n", "<leader>fr", require("fzf-lua").registers, { desc = "Fzf Registers" })
-map("n", "<leader>fm", require("fzf-lua").marks, { desc = "Fzf Marks" })
-map("n", "<leader>fg", require("fzf-lua").live_grep, { desc = "Fzf Grep" })
-map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "Fzf Buffers" })
-map("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "Fzf Help" })
-map("n", "<leader>fc", require("fzf-lua").git_bcommits, { desc = "Fzf Git Commits" })
+-- Telescope
+
+local builtin = require("telescope.builtin")
+map("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+map("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
+map("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
+map("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+map("n", "<leader>fx", function()
+	builtin.find_files({
+		cwd = vim.fn.stdpath("config"),
+	})
+end, { desc = "Find nvim config files " })
 
 -- lsp
 

@@ -25,7 +25,7 @@ return {
 			local capabilities = vim.lsp.protocol.make_client_capabilities()
 			capabilities = vim.tbl_deep_extend("force", capabilities, blink_cmp.get_lsp_capabilities())
 
-			local keymaps = require("core.keymaps").lsp
+			local keymaps = require("config.settings.keymaps").lsp
 			local on_attach = function(_, bufnr)
 				keymaps(bufnr)
 			end
@@ -38,6 +38,7 @@ return {
 			})
 
 			masonlspcfg.setup({
+				automatic_installation = true,
 				ensure_installed = lsps,
 			})
 
