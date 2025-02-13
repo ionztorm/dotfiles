@@ -1,5 +1,5 @@
 return {
-	"saghen/blink.cmp",
+	"Saghen/blink.cmp",
 	event = { "LspAttach" },
 	dependencies = { "giuxtaposition/blink-cmp-copilot", "rafamadriz/friendly-snippets" },
 	version = "v0.*",
