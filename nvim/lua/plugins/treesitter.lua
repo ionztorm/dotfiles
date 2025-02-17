@@ -25,6 +25,7 @@ return {
 				"gitignore",
 				"dockerfile",
 				"bash",
+				"regex",
 			},
 			ignore_install = {},
 			sync_install = false,
