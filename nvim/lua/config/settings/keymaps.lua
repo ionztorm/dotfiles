@@ -41,14 +41,21 @@ map("n", "<C-j>", "<C-w>j", { desc = "Move to the pane below" })
 map("n", "<C-k>", "<C-w>k", { desc = "Move to the pane above" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move to the pane on the right" })
 
--- lazygit
-map("n", "<leader>gg", ":LazyGit<CR>", { desc = "Open LazyGit" })
+-- Snacks
+local Snacks = require("snacks")
+map("n", "<leader>gg", function()
+	Snacks.lazygit()
+end, { desc = "Lazygit" })
 
--- neotree / mini.files
+-- live preview
+map("n", "<leader>ls", function()
+	sennvim.utilities.toggle_live_preview()
+end, { desc = "Toggle LivePreview" })
+
+-- Picker
 map("n", "<leader>ee", ":lua MiniFiles.open()<CR>", { desc = "Togglu MiniFiles" })
 
 -- Telescope
-
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
 map("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })

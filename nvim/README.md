@@ -2,6 +2,31 @@
 
 Sennvim is a simple and lightweight vim configuration for Python, Go, and TypeScript development.
 
+## Installation
+
+Make a backup of your current nvim configuration:
+
+```text
+~/.config/nvim
+~/.local/share/nvim
+~/.local/state/nvim
+~/.cache/nvim
+```
+
+Then delete these dirs.
+
+```bash
+git clone https://github.com/ionztorm/sennvim.git ~/.config/nvim
+```
+
+Then delete the git dir:
+
+```bash
+rm -rf ~/.config/nvim/.git .gitignore
+```
+
+Run nvim.
+
 ## Plugins Included
 
 Sennvim uses the following plugins:
@@ -16,7 +41,7 @@ Sennvim uses the following plugins:
 - [Copilot](https://www.github.com/zbirenbaum/copilot.lua) - AI Assistant - will need some custom work to change this.
 - [Treesitter](https://www.github.com/nvim-treesitter/nvim-treesitter) - for syntax highlighting.
 - [Gitsigns](https://www.github.com/lewis6991/gitsigns.nvim) - for git integration.
-- [LazyGit](https://www.github.com/kdheepak/lazygit.nvim) - for git integration.
+- [Snacks](https://www.github.com/folke/snacks.nvim) - Various, including LazyGit
 - [TeleScope](https://www.github.com/nvim-telescope/telescope.nvim) - for fuzzy finder.
 - [Trouble](https://www.github.com/folke/trouble.nvim) - for quickfix list.
 - [Todo Comments](https://www.github.com/folke/todo-comments.nvim) - for todo comments colouring and highlights.
@@ -49,7 +74,7 @@ I've included a custom, modular approach to loading lagnuage servers, formatters
   * `sennvim.linters.add_linter` to add a linter.
 4. These files will be automatically detected, loaded, and installed via Mason on the next load.
 
-For extample, here is the Python language file:
+For example, here is the Python language file:
 
 ```lua
 
@@ -154,7 +179,10 @@ Note: there is also a global `sennvim.formatters.add_formatter_config` available
 - `leader cf` Format current file
 - `leader ce` Open diagnostics list
 
-
 ## Still todo:
 
-- Includ dap & dap loaders.
+- Include dap & dap loaders.
+
+## Contributions
+
+I welcome the idea that someone might find this useful and want to contribute. If you have any ideas, suggestions, or improvements, please feel free to open an issue or a pull request.
