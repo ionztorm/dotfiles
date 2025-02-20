@@ -6,33 +6,8 @@ return {
 	opts = {
 		sources = {
 			default = { "copilot", "lsp", "path", "snippets", "buffer", "markdown" },
-			cmdline = function()
-				local type = vim.fn.getcmdtype()
-				-- Search forward and backward
-				if type == "/" or type == "?" then
-					return { "buffer" }
-				end
-				-- Commands
-				if type == ":" then
-					return { "cmdline" }
-				end
-				return {}
-			end,
-			providers = {
-				lsp = {
-					min_keyword_length = 1,
-				},
-				path = {
-					min_keyword_length = 1,
-				},
-				snippets = {
-					min_keyword_length = 2,
-				},
-				buffer = {
-					min_keyword_length = 4,
-					max_items = 5,
-				},
 
+			providers = {
 				copilot = {
 					name = "copilot",
 					module = "blink-cmp-copilot",

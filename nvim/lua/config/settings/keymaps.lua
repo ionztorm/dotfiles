@@ -46,6 +46,9 @@ local Snacks = require("snacks")
 map("n", "<leader>gg", function()
 	Snacks.lazygit()
 end, { desc = "Lazygit" })
+map("n", "<leader>snd", function()
+	Snacks.toggle.dim()
+end, { desc = "Toggle dim" })
 
 -- live preview
 map("n", "<leader>ls", function()
@@ -53,7 +56,8 @@ map("n", "<leader>ls", function()
 end, { desc = "Toggle LivePreview" })
 
 -- Picker
-map("n", "<leader>ee", ":lua MiniFiles.open()<CR>", { desc = "Togglu MiniFiles" })
+-- map("n", "<leader>ee", ":lua MiniFiles.open()<CR>", { desc = "Togglu MiniFiles" })
+map("n", "<leader>ee", "<cmd>Yazi<cr>", { desc = "Yazi" })
 
 -- Telescope
 local builtin = require("telescope.builtin")

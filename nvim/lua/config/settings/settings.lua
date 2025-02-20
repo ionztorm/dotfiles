@@ -13,10 +13,10 @@ local cmd = vim.cmd -- Shorten vim.cmd to cmd
 local api = vim.api -- Shorten vim.api to api
 
 -- ===========================================
--- For neotree - hides netrw
+-- hides netrw
 -- ===========================================
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- ===========================================
 -- Leader Key Settings
@@ -55,9 +55,9 @@ opt.tabstop = 4 -- Tab width is 4 spaces
 opt.autoindent = true -- Auto-indent new lines
 opt.smartindent = true -- Smart indent based on code structure
 opt.breakindent = true -- Preserve indent in wrapped lines
-opt.list = true -- Show whitespace characters
-opt.listchars:append("tab:· ")
-opt.listchars:append("space:·") -- Use a centered dot for spaces
+-- opt.list = true -- Show whitespace characters
+-- opt.listchars:append("tab:· ")
+-- opt.listchars:append("space:·") -- Use a centered dot for spaces
 
 -- ===========================================
 -- Scrolling and Cursor Settings

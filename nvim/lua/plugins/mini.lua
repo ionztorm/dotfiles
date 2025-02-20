@@ -9,7 +9,6 @@ return {
 			local cursorword = require("mini.cursorword")
 			local hipatterns = require("mini.hipatterns")
 			local ai = require("mini.ai")
-			local files = require("mini.files")
 
 			-- configuration funcs
 
@@ -36,8 +35,7 @@ return {
 				})
 			end
 
-			-- setupss
-			files.setup({})
+			-- setups
 			icons.setup({})
 			statusline.setup({ use_icons = true, content = { active = content_active } })
 			ai.setup({ n_lines = 500 })

@@ -3,11 +3,12 @@ return {
 	priority = 1000,
 	lazy = false,
 	opts = {
-		input = { enable = true },
-		lazygit = { enable = true },
-		scope = { enable = true },
-		scroll = { enable = true },
-		indent = { enable = true },
-		dim = { enable = true },
+		toggle = { enabled = true },
+		input = { enabled = true },
+		lazygit = { enabled = true },
+		scope = { enabled = true },
+		scroll = { enabled = true },
+		indent = { enabled = true },
+		dim = { enabled = true },
 	},
 }
