@@ -42,7 +42,7 @@ opt.splitbelow = true -- Horizontal splits open below
 opt.splitkeep = "cursor" -- Keep cursor centered during splits
 opt.hlsearch = true -- Highlight search matches
 opt.signcolumn = "yes" -- Show sign column
-opt.cmdheight = 0 -- hides the command line when not in use
+opt.cmdheight = 1 -- hides the command line when not in use
 opt.shortmess:append("W")
 
 -- ===========================================

@@ -10,7 +10,7 @@ return function()
 		includeInlayVariableTypeHintsWhenTypeMatchesName = true,
 	}
 
-	local ts_settings = {
+	sennvim.lsp.add_config("ts_ls", {
 		settings = {
 			maxTsServerMemory = 12288,
 			typescript = {
@@ -20,9 +20,7 @@ return function()
 				inlayHints = inlay_hints,
 			},
 		},
-	}
-
-	sennvim.lsp.add_config("ts_ls", ts_settings)
+	})
 
 	sennvim.formatters.add_formatter("typescript", { "biome" })
 	sennvim.formatters.add_formatter("typescriptreact", { "biome" })

@@ -1,4 +1,4 @@
-inherits = "catppuccin_mocha"
+inherits = "everforest_dark"
 "ui.background" ={}
 # "ui.linenr" = { fg = "linenr" }
 # "ui.linenr.selected" = { fg = "curlinenr" }

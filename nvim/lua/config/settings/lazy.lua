@@ -16,6 +16,20 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 	spec = {
+		-- {
+		-- 	"rose-pine/neovim",
+		-- 	name = "rose-pine",
+		-- 	config = function()
+		-- 		require("rose-pine").setup({
+		-- 			vaiant = "main",
+		-- 			styles = {
+		-- 				italic = false,
+		-- 				transparency = true,
+		-- 			},
+		-- 		})
+		-- 		vim.cmd("colorscheme rose-pine")
+		-- 	end,
+		-- },
 		{
 			"vague2k/vague.nvim",
 			config = function()

@@ -18,6 +18,6 @@ window-padding-color = extend-always
 # config files
 config-file = ./theme/batman
 config-file = ./font/berkeley-mono
-config-file = ./opacity/80
+config-file = ./opacity/95
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only
