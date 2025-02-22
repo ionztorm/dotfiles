@@ -16,7 +16,7 @@ window-padding-x = 10
 window-padding-color = extend-always
 
 # config files
-config-file = ./theme/batman
+config-file = ./theme/afterglow
 config-file = ./font/berkeley-mono
 config-file = ./opacity/95
 config-file = ./keybind/keybinds
