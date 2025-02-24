@@ -123,7 +123,7 @@ text-width = 80
 soft-wrap.enable = true
 soft-wrap.wrap-at-text-width = true
 indent = { tab-width = 4, unit = "    " }
-language-servers = ["marksman", "ltex-ls-plus"]
+language-servers = ["marksman"]
 formatter = { command = 'prettier', args = [
   "--parser",
   "markdown",

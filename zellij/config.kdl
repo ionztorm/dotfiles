@@ -249,8 +249,8 @@ load_plugins {
 // Default: default
 // 
 // theme "tokyo-night-storm"
-theme "catppuccin-mocha"
-// theme "kanagawa"
+// theme "catppuccin-mocha"
+theme "kanagawa"
 // theme "gruvbox-dark"
 
 // Choose the base input mode of zellij.
