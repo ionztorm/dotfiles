@@ -16,7 +16,7 @@ clipboard-write = allow
 # window-padding-color = extend-always
 
 # config files
-config-file = ./theme/afterglow
+config-file = ./theme/kanagawa-dragon
 config-file = ./font/berkeley-mono
 config-file = ./opacity/95
 config-file = ./keybind/keybinds

@@ -1,10 +1,4 @@
-inherits = "everforest_dark"
+inherits = "kanagawa-dragon"
 "ui.background" ={}
-# "ui.linenr" = { fg = "linenr" }
-# "ui.linenr.selected" = { fg = "curlinenr" }
-# "ui.cursorline.primary" = { bg = "cursorline" }
-
-# [palette]
-# linenr = "#8C8C8C"
-# curlinenr = "#FFFFF0"
-# cursorline = "#181B24"
+"ui.linenr" = { fg = "dragonBlack6" }
+"ui.gutter" = { fg = "sumiInk6" }

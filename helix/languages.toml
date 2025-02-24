@@ -46,7 +46,7 @@ args = ["server", "--preview"]
 environment = { "RUFF_TRACE" = "messages" }
 
 [language-server.ruff.config.settings]
-lineLength = 100
+lineLength = 80
 logLevel = "debug"
 configuration = "~/.config/ruff/ruff.toml"
 
@@ -111,6 +111,23 @@ auto-format = true
 # Markdown -------------------------------
 # ========================================
 
+[language-server.ltex-ls-plus.config]
+ltex.diagnosticSeverity = "warning"
+ltex.language = "en-GB"
+ltex.disabledRules = { "en-US" = ["PROFANITY"], "en-GB" = ["PROFANITY"] }
+ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
+
 [[language]]
 name = "markdown"
+text-width = 80
+soft-wrap.enable = true
+soft-wrap.wrap-at-text-width = true
 indent = { tab-width = 4, unit = "    " }
+language-servers = ["marksman", "ltex-ls-plus"]
+formatter = { command = 'prettier', args = [
+  "--parser",
+  "markdown",
+  "--prose-wrap",
+  "never", # <always|never|preserve>
+] }
+auto-format = true

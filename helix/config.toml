@@ -11,8 +11,11 @@ cursorline = true
 auto-completion = true
 auto-format = true
 text-width = 80
-rulers = [100]
+rulers = [80]
 indent-heuristic = "tree-sitter"
+
+[editor.smart-tab]
+enable = true
 
 [editor.inline-diagnostics]
 cursor-line = "info"

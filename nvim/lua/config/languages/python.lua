@@ -16,11 +16,4 @@ return function()
 			},
 		},
 	})
-	-- sennvim.linters.add_linter("python", { "ruff" })
-	-- sennvim.formatters.add_formatter("python", { "ruff" })
-	-- sennvim.formatters.add_formatter_config("ruff", {
-	-- 	command = "ruff",
-	-- 	args = { "--fix", "--stdin-filename", "%:p", "-" },
-	-- 	stdin = true,
-	-- })
 end
