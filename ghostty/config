@@ -18,6 +18,6 @@ clipboard-write = allow
 # config files
 config-file = ./theme/kanagawa-dragon
 config-file = ./font/berkeley-mono
-config-file = ./opacity/95
+config-file = ./opacity/90
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only
