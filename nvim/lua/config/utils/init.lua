@@ -1,5 +1,3 @@
--- require("config.utils.statusline")
-
 local M = {}
 
 M.utilities = require("config.utils.utilities")

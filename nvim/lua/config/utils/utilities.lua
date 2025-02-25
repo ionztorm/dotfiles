@@ -1,7 +1,5 @@
--- utilities.lua
 local M = {}
 
--- Combine any number of tables into one table
 M.combine_tables = function(...)
 	local combined = {}
 	for _, tbl in ipairs({ ... }) do
@@ -18,7 +16,6 @@ M.mason_ensure_installed = function(tools)
 	local mr = require("mason-registry")
 	mr.refresh(function()
 		for _, tool in ipairs(tools) do
-			-- Replace 'ts_ls' with 'tailwind-language-server'
 			if tool == "ts_ls" then
 				tool = "typescript-language-server"
 			end
@@ -62,4 +59,3 @@ M.toggle_live_preview = function()
 end
 
 return M
-

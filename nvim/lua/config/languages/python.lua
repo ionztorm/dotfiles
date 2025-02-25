@@ -2,12 +2,18 @@ return function()
 	sennvim.lsp.add_config("basedpyright", {
 		settings = {
 			basedpyright = {
-				typeCheckingMode = "basic",
+				analysis = {
+					autoSearchPaths = true,
+					diagnosticMode = "openFilesOnly",
+					useLibraryCodeForTypes = true,
+					typeCheckingMode = "basic",
+				},
 				autoImportCompletions = true,
 				disableOrganizeImports = true,
 			},
 		},
 	})
+
 	sennvim.lsp.add_config("ruff", {
 		init_options = {
 			settings = {

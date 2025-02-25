@@ -45,23 +45,14 @@ return {
 			sennvim.utilities.mason_ensure_installed(ensure_installed)
 
 			for server, config in pairs(lsp_configs) do
-				config.on_attach = on_attach
-				config.capabilities = vim.tbl_deep_extend("force", capabilities, config.capabilities or {})
-
-				local first_key, first_value = next(config)
-
-				local lsp_setup = {
+				local lsp_setup = vim.tbl_deep_extend("force", {
 					autostart = config.autostart,
 					cmd = config.cmd,
-					capabilities = capabilities,
+					capabilities = vim.tbl_deep_extend("force", capabilities, config.capabilities or {}),
 					filetypes = config.filetypes,
 					on_attach = on_attach,
 					root_dir = config.root_dir,
-				}
-
-				if first_key and first_value then
-					lsp_setup[first_key] = first_value
-				end
+				}, config)
 
 				lspconfig[server].setup(lsp_setup)
 			end

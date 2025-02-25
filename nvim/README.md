@@ -2,9 +2,27 @@
 
 Sennvim is a simple and lightweight vim configuration for Python, Go, and TypeScript development.
 
-## Installation
+## Setup
 
-Make a backup of your current nvim configuration:
+### Requirements
+
+This neovim configuration uses these packages under the hood. Install with homebrew:
+
+```bash
+brew install lazygit fzf ripgrep regex yazi
+```
+
+Or use your preferred package manager.
+
+#### Python
+
+The Python LSP setup uses a Ruff config. You can grab my config [here](https://github.com/ionztorm/dotfiles/blob/main/ruff/ruff.toml). 
+Put it in `~/.config/ruff`. If you store it elsewhere, remember to update `lua/config/lauguages/python.lua`.
+
+### Installation
+
+Make a backup of your current nvim configuration, just in case you want to go back later. Once backed up,
+delete them. The default directories are:
 
 ```text
 ~/.config/nvim
@@ -13,19 +31,24 @@ Make a backup of your current nvim configuration:
 ~/.cache/nvim
 ```
 
-Then delete these dirs.
+Now clone this repository into your nvim directory:
 
 ```bash
 git clone https://github.com/ionztorm/sennvim.git ~/.config/nvim
 ```
 
-Then delete the git dir:
+Next, remove the git dir:
 
 ```bash
 rm -rf ~/.config/nvim/.git .gitignore
 ```
 
 Run nvim.
+
+### Full Dev Environment
+
+If you want to check out my full dev environment, my [dotfiles](https://www.github.com/ionztorm/dotfiles) are public.
+I cover a setup guide for Mac [here](https://github.com/ionztorm/setups/blob/main/macos-fresh-setup.md)
 
 ## Plugins Included
 
@@ -51,29 +74,36 @@ Sennvim uses the following plugins:
 - [Live Preview](https://www.github.com/brianhuster/live-preview.nvim) - for live preview of markdown and html files.
 - [Yazi](https://github.com/mikavilpas/yazi.nvim?tab=readme-ov-file) - Yazi for neovim. Requires Yazi
 
-## Requirements & Reccomendations:
-
-Install with homebrew:
-
-```bash
-brew install lazygit fzf ripgrep regex yazi
-```
-
-Or use your preferred package manager.
-
-If you plan on using Ruff for Python, and you like strict configurations, you can grab my config [here](https://github.com/ionztorm/dotfiles/blob/main/ruff/ruff.toml). Remember to update the path in the Python language file (details on language files below).
-
 ## Language Servers
 
 I've included a custom, modular approach to loading lagnuage servers, formatters, and linters into lsp config, conform, and nvim lint. To add your own languages, simply:
 
 1. Create a new lua file for the language in `nvim/lua/config/languages`
-2. Use return a function.
-3. In the function, use the globals:
+2. Each language file should return a function.
+3. In the function, call these globals:
   * `sennvim.lsp.add_config` to add an lsp server and config
   * `sennvim.formatters.add_formatter` to add a formatter
   * `sennvim.linters.add_linter` to add a linter.
 4. These files will be automatically detected, loaded, and installed via Mason on the next load.
+
+The signature for `lsp.add_config` is:
+
+```lua
+-- server_name: string
+-- config: table
+sennvim.lsp.add_config(server_name, config)
+```
+
+Signatures for linters and formatters are:
+
+```lua
+-- language: string
+-- linters / formatter : table
+sennvim.linters.add_linter(language, linters)
+sennvim.formatters.add_formatter(language, formatter)
+```
+
+Linter and Formatter tables can contain multiple linters and formatters.
 
 For example, here is the Python language file:
 
@@ -159,9 +189,9 @@ Note: there is also a global `sennvim.formatters.add_formatter_config` available
 
 ### Quick access to tools
 
-- `leader gg` Open Lazygit
-- `leader ls` Toggle live preview
-- `leader ee` Open file browser
+- `leader gg` Open Lazygit. Press `?` for help and keybindings.
+- `leader ls` Toggle live preview for markdown and html files.
+- `leader ee` Open Yazy. Yazi keybindings. See [Yazi Documentation](https://yazi-rs.github.io/docs/configuration/keymap)
 - `leader ff` Open fuzzy finder
 - `leader xx` Open diagnostics list
 - `leader fg` Open live grep
