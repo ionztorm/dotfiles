@@ -86,7 +86,7 @@ brew install discord bitwarden bruno raycast obsidian
 
 ### Markdown live preview (Helix users only - this is covered in nvim)
 
-If you are using my neovim config, live preview of html / md files cah be acheieved using the keymap: `<leader>ls`. 
+If you are using my neovim config, live preview of html / md files cah be achieved using the keymap: `<leader>ls`. 
 
 I use Helix, but I do maintain an nvim config in case it's needed. You can find it [here](https://www.github.com/sennvim)
 
