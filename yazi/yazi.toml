@@ -1,0 +1,36 @@
+[opener]
+edit = [
+    { run = 'hx "$1"', desc = "helix", block = true },
+    { run = 'nvim "$1"', desc = "nvim", block = true },
+]
+
+[open]
+rules = [
+  # Mime types
+  { mime = "application/pdf", use = "pdf" },
+  { mime = "image/*", use = "image" },
+  { mime = "video/*", use = "video" },
+  { mime = "audio/*", use = "audio" },
+  { mime = "text/*", use = ["edit", "text"] },
+
+  # File extensions
+  { name = "*.pdf", use = "pdf" },
+  { name = "*.json", use = "edit" },
+  { name = "*.md", use = "edit" },
+  { name = "*.html", use = ["edit", "text"] },
+  { name = "*.sh", use = "edit" },
+  { name = "*.txt", use = ["edit", "text"] },
+  { name = "*.csv", use = "edit" },
+  { name = "*.dat", use = "edit" },
+  { name = "*.toml", use = "edit" },
+  { name = "*.yaml", use = "edit" },
+  { name = "*.yml", use = "edit" },
+  { name = "*.lua", use = ["edit", "text"] },
+  { name = "*.log", use = "text" },
+  { name = "*.rs", use = ["edit", "text"] },
+  { name = "*.js", use = ["edit", "text"] },
+  { name = "*.ts", use = ["edit", "text"] },
+  { name = "*.mp3", use = "audio" },
+  { name = "*.wav", use = "audio" },
+  { name = "*.ogg", use = "audio" },
+]

@@ -31,52 +31,77 @@ require("lazy").setup({
 		-- 	end,
 		-- },
 		{
-			"vague2k/vague.nvim",
+			"rebelot/kanagawa.nvim",
+			priority = 1000,
+			name = "kanagawa",
 			config = function()
-				-- NOTE: you do not need to call setup if you don't want to.
-				require("vague").setup({
-					transparent = true,
-					style = {
-						boolean = "none",
-						number = "none",
-						float = "none",
-						error = "none",
-						comments = "none",
-						conditionals = "none",
-						functions = "none",
-						headings = "bold",
-						operators = "none",
-						strings = "none",
-						variables = "none",
-
-						-- keywords
-						keywords = "none",
-						keyword_return = "none",
-						keywords_loop = "none",
-						keywords_label = "none",
-						keywords_exception = "none",
-
-						-- builtin
-						builtin_constants = "none",
-						builtin_functions = "none",
-						builtin_types = "none",
-						builtin_variables = "none",
-					},
+				require("kanagawa").setup({
+					commentStyle = { italic = false },
+					statementStyle = { italic = false },
+					keywordStyle = { italic = false },
+					dimInactive = true,
+					terminalColors = true,
+					theme = "lotus",
 					colors = {
-						-- func = "#bc96b0",
-						-- keyword = "#787bab",
-						-- string = "#d4bd98",
-						-- string = "#8a739a",
-						-- string = "#f2e6ff",
-						-- number = "#f2e6ff",
-						-- string = "#d8d5b1",
-						-- number = "#8f729e",
-						-- type = "#dcaed7",
+						theme = {
+							all = {
+								ui = {
+									bg_gutter = "none",
+								},
+							},
+						},
 					},
 				})
-				vim.cmd.colorscheme("vague")
+				vim.cmd("colorscheme kanagawa")
 			end,
 		},
+		-- {
+		-- 	"vague2k/vague.nvim",
+		-- 	config = function()
+		-- 		-- NOTE: you do not need to call setup if you don't want to.
+		-- 		require("vague").setup({
+		-- 			transparent = true,
+		-- 			style = {
+		-- 				boolean = "none",
+		-- 				number = "none",
+		-- 				float = "none",
+		-- 				error = "none",
+		-- 				comments = "none",
+		-- 				conditionals = "none",
+		-- 				functions = "none",
+		-- 				headings = "bold",
+		-- 				operators = "none",
+		-- 				strings = "none",
+		-- 				variables = "none",
+		--
+		-- 				-- keywords
+		-- 				keywords = "none",
+		-- 				keyword_return = "none",
+		-- 				keywords_loop = "none",
+		-- 				keywords_label = "none",
+		-- 				keywords_exception = "none",
+		--
+		-- 				-- builtin
+		-- 				builtin_constants = "none",
+		-- 				builtin_functions = "none",
+		-- 				builtin_types = "none",
+		-- 				builtin_variables = "none",
+		-- 			},
+		-- 			colors = {
+		-- 				-- func = "#bc96b0",
+		-- 				-- keyword = "#787bab",
+		-- 				-- string = "#d4bd98",
+		-- 				-- string = "#8a739a",
+		-- 				-- string = "#f2e6ff",
+		-- 				-- number = "#f2e6ff",
+		-- 				-- string = "#d8d5b1",
+		-- 				-- number = "#8f729e",
+		-- 				-- type = "#dcaed7",
+		-- 			},
+		-- 		})
+		-- 		vim.cmd.colorscheme("vague")
+		-- 	end,
+		-- },
 		-- {
 		-- 	"folke/tokyonight.nvim",
 		-- 	lazy = false,

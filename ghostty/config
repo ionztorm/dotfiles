@@ -16,8 +16,8 @@ clipboard-write = allow
 # window-padding-color = extend-always
 
 # config files
-config-file = ./theme/kanagawa-dragon
+config-file = ./theme/kanagawa
 config-file = ./font/berkeley-mono
-config-file = ./opacity/90
+config-file = ./opacity/98
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only

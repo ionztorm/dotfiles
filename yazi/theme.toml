@@ -3,5 +3,5 @@
 # dark = "catppuccin-mocha"
 # dark = "tokyo-night"
 # dark = "gruvbox-dark"
-use = "kanagawa-dragon"
-dark = "kanagawa-dragon"
+use = "kanagawa"
+dark = "kanagawa"

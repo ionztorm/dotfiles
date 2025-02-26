@@ -1,4 +1,5 @@
-inherits = "kanagawa-dragon"
-"ui.background" ={}
+inherits = "kanagawa"
+# "ui.background" ={}
 "ui.linenr" = { fg = "dragonBlack6" }
 "ui.gutter" = { fg = "sumiInk6" }
+"keyword" = { fg = "oniViolet" }
