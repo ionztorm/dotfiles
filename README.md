@@ -188,6 +188,12 @@ In some cases, you may need to restart the terminal. Try running `z ~/.config`. 
 
 Tmux is a `T`erminal `Mu`ltiple`x`er - basically it allows you to create sessions that you can attach to and detach from, but the sessions remain active (as long as the device remains turned on). You can create a session for a particular development project, with servers running, detatch from it and re-attach at a later date to find the server still running and your code editor still active.
 
+Before you get started, you'll want to install the plugin manager:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
+
 - Navigate to a project folder using the terminal
 
 ```bash
