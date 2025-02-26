@@ -14,3 +14,7 @@ helix/runtime/grammars/sources
 raycast/extensions
 nvtest
 exercism/user.json
+zed
+nvim
+wezterm
+zellij
