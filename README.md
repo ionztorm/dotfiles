@@ -218,7 +218,3 @@ You can alternativley use:
 - zellij instead of tmux
 - starship instead of oh-my-posh
 - neovim instead of helix
-
-You can adjust this setup guide by following the apply the changes in the [Alternative Setups](./alternative-setups.md) guide.
-
-N
