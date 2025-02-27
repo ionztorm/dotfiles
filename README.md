@@ -53,7 +53,7 @@ brew install ghostty helix neovim tmux
 #### Command Line Tools and Utilities
 
 ```bash
-brew install gh git lazygit ripgrep fzf lsd yazi zoxide regex
+brew install gh git lazygit ripgrep fzf lsd yazi zoxide
 ```
 
 #### Languages
