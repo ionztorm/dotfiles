@@ -47,7 +47,7 @@ The following commands will install the packages I use. Feel free to add or remo
 #### Terminal and Editor
 
 ```bash
-brew install ghostty helix tmux
+brew install ghostty helix neovim tmux
 ```
 
 #### Command Line Tools and Utilities
@@ -68,7 +68,7 @@ brew install typescript go python
 brew install node oven-sh/bun/bun
 ```
 
-#### Language Tools (LSP, Formatters, Linters)
+#### Language Tools (LSP, Formatters, Linters - NOT NEEDED if you are using neovim)
 
 ```bash
 brew install gopls ruff typescript-language-server tailwindcss-language-server basedpyright vscode-langservers-extracted biome prettier marksman
