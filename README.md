@@ -3,11 +3,8 @@
 Take note, these clone commands will error if your config dir already exists. You should probably backup your own configs
 
 ```bash
-# SSH
-git clone git@github.com:ionztorm/dotfiles ~/.config
-
-# HTTPS
 git clone https://github.com/ionztorm/dotfiles.git ~/.config
+git clone https://github.com/ionztorm/sennvim.git ~/.config/nvim
 ```
 
 Got an error and feeling brave? DISCLAIMER: This is going to delete all your stuff!
@@ -16,113 +13,15 @@ Got an error and feeling brave? DISCLAIMER: This is going to delete all your stu
 rm -rf ~/.config && git clone https://github.com/ionztorm/dotfiles.git ~/.config
 ```
 
-## I only want the neovim config?
+# zshrc config
 
-Ok, boring! The neovim config i not in this repo, you can clone it from below, but I recommend taking a look at the [sennvim repo](https://www.github.com/ionztorm/sennvim) as it has some dependencies:
-
-```bash
-# SSH
-git clone git@github.com:ionztorm/sennvim.git ~/.config
-
-# HTTPS
-git clone https://github.com/ionztorm/sennvim.git ~/.config
-```
-
-# Installing stuff
-
-## Install Homebrew & Homebrew apps
-
-- [Homebrew](https://brew.sh/)
-
-Homebrew is a package manager for MacOS and Linux. It's what I use to keep my packages up to date. You can likely use whichever package manager you prefer, but you'll have to double check that the packages exist.
-
-To install homebrew, visit the link above and follow the installation instructions.
-
-## Installing Packages
-
-The following commands will install the packages I use. Feel free to add or remove items
-
-### Dev Environment
-
-#### Terminal and Editor
+Open up the terminal and run the following command:
 
 ```bash
-brew install ghostty helix neovim tmux
+vi ~/.zshrc
 ```
 
-#### Command Line Tools and Utilities
-
-```bash
-brew install gh git lazygit ripgrep fzf lsd yazi zoxide
-```
-
-#### Languages
-
-```bash
-brew install typescript go python
-```
-
-#### Runtimes
-
-```bash
-brew install node oven-sh/bun/bun
-```
-
-#### Language Tools (LSP, Formatters, Linters - NOT NEEDED if you are using neovim)
-
-```bash
-brew install gopls ruff typescript-language-server tailwindcss-language-server basedpyright vscode-langservers-extracted biome prettier marksman
-```
-
-```bash
-npm i -g emmet-ls @prisma/language-server
-```
-
-#### Software
-
-```bash
-brew install discord bitwarden bruno raycast obsidian
-```
-
-### Markdown live preview (Helix users only - this is covered in nvim)
-
-If you are using my neovim config, live preview of html / md files cah be achieved using the keymap: `<leader>ls`. 
-
-I use Helix, but I do maintain an nvim config in case it's needed. You can find it [here](https://www.github.com/sennvim)
-
-This is not possible in Helix yet, so we can use a github cli extension:
-
-Install (requires github cli which wrs installed above):
-
-```bash
-gh extension install yusukebe/gh-markdown-preview
-```
-
-Now we can run the command:
-
-```bash
-gh markdown-preview <file name>
-```
-
-This loads the markdown file in your browser with github formatting. It uses a live server so updates on save.
-
-## Prep terminal
-
-Open ghostty
-
-### zshrc config
-
-- Create the zshrc configuration file:
-
-```bash
-hx ~/.zshrc
-```
-
-Let's:
-
-- Add some useful aliases for lsd and git (just copy paste):
-- Setup oh-my-posh
-- Setup zoxide
+Paste the following into the file:
 
 ```bash
 alias cl="clear"
@@ -131,6 +30,12 @@ alias lsa="ls -a"
 alias lsl="ls -l"
 alias lsla="ls -la"
 alias lst="ls --tree"
+alias cd="z"
+
+# Brew
+
+alias bfi="brew bundle --file=~/.config/homebrew/Brewfile"
+alias bfc="brew bundle dump --file=~/.config/homebrew/Brewfile"
 
 # neovim
 
@@ -173,16 +78,75 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/robbyrussel.json)"
 eval "$(zoxide init zsh)"
 export PATH=$PATH:$HOME/go/bin         # Sometimes homebrew doesn't add this to the path
 ```
+- Save and exit:
 
-- Save and exit. Helix works the same way as vim/neovim - press `esc` to enter normal mode and type `:wq`.
+```text
+press `esc` to enter normal mode and type `:wq`.
+```
 
-Source the file to load the changes.
+- Source the file to load the changes.
 
 ```bash
 source ~/.zshrc
 ```
 
-In some cases, you may need to restart the terminal. Try running `z ~/.config`. If you get an error, restart the terminal. `z` is the command used in place of `cd` when using zoxide.
+# Installing stuff
+
+## Homebrew
+
+All packages will be installed using Homebrew and a Brewfile. If you've cloned the repo and copied the zshrc file contents above, then you already have the Brewfile and you already have my command alias' to simplify this process.
+
+Homebrew is a package manager for MacOS and Linux. It's what I use to keep my packages up to date. You can likely use whichever package manager you prefer, but you'll have to double check that the packages exist.
+
+So first you need to install homebrew via your commandline. Check this link to see the most up to date command line for installation:
+
+- [Homebrew](https://brew.sh/)
+
+Pay attention to the installation process - once installed it will ask you to run a few commands to add brew to your path. You may also be asked to enter your password at some point to grant permissions to update the command line tools.
+
+## Packages
+
+Make sure homebrew is installed and up to date:
+
+```bash
+brew --version
+```
+
+If it's installed, install all the packages by running this command in your terminal:
+
+```bash
+bfi
+```
+
+This may take a while as it installs all packages.
+
+Note, if you install any additional packages of your own using `brew install` you can update the Brewfile by running:
+
+```bash
+bfc
+```
+
+The file is in `~/.config/homebrew/Brewfile`, so you'll want to make a copy of this if you ever reset to factory defaults.
+
+## Markdown live preview (Helix users only - this is covered in nvim)
+
+If you are using my neovim config, live preview of html / md files cah be achieved using the keymap: `<leader>ls`. 
+
+This is not possible in Helix yet, so we can use a github cli extension:
+
+Install (requires github cli which was installed above):
+
+```bash
+gh extension install yusukebe/gh-markdown-preview
+```
+
+Now we can run the command:
+
+```bash
+gh markdown-preview <path/file name>
+```
+
+This loads the markdown file in your browser with github formatting. It uses a live server so updates on save.
 
 ### Tmux
 
@@ -198,7 +162,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 
 ```bash
 # for example
-z project/directory
+cd project/directory
 ```
 
 - Create a session:
