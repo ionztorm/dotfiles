@@ -17,7 +17,7 @@ clipboard-write = allow
 
 # config files
 config-file = ./theme/kanagawa
-config-file = ./font/berkeley-mono
+config-file = ./font/monolisa
 config-file = ./opacity/98
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only
