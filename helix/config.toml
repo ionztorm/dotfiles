@@ -51,13 +51,21 @@ display-messages = true
 # display-inlay-hints = true
 
 [keys.normal]
+# cancel selection and return to original position
 esc = ["collapse_selection", "keep_primary_selection"]
+# move selected text up
 "S-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+# move selected text down
 "S-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+# Go to the end of the document
 G="goto_file_end"
+# go to the next paragraph
 "{" = ["goto_next_paragraph"]
+# go to previous paragraph
 "}" = ["goto_prev_paragraph"]
- "*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+# move hella fast
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+# opens lazygit (if installed)
  C-g = [
     ":write-all", 
     ":new", 
