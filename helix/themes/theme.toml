@@ -2,4 +2,5 @@ inherits = "kanagawa"
 # "ui.background" ={}
 "ui.linenr" = { fg = "dragonBlack6" }
 "ui.gutter" = { fg = "sumiInk6" }
-"keyword" = { fg = "oniViolet" }
+"keyword" = { fg = "oniViolet"}
+"variable.builtin" = { fg = "waveRed", modifiers = ["italic"] }
