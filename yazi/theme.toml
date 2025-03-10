@@ -3,5 +3,6 @@
 # dark = "catppuccin-mocha"
 # dark = "tokyo-night"
 # dark = "gruvbox-dark"
-use = "kanagawa"
-dark = "kanagawa"
+# use = "kanagawa"
+# dark = "kanagawa"
+use = "vscode-dark-plus"
