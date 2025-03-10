@@ -42,7 +42,7 @@ autoImportCompletions = true
 
 [language-server.ruff]
 command = "ruff"
-args = ["server", "--preview"]
+args = ["server"] # --preview
 environment = { "RUFF_TRACE" = "messages" }
 
 [language-server.ruff.config.settings]
