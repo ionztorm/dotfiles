@@ -78,6 +78,7 @@ eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/robbyrussel.json)"
 eval "$(zoxide init zsh)"
 export PATH=$PATH:$HOME/go/bin         # Sometimes homebrew doesn't add this to the path
 ```
+
 - Save and exit:
 
 ```text
@@ -91,6 +92,79 @@ source ~/.zshrc
 ```
 
 # Installing stuff
+
+## Helix & Yazi
+
+Note: This is for Mac OS, it may differ for your OS.
+
+1. Install Rust
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+Check [the official page](https://www.rust-lang.org/tools/install) for an up to date command.
+
+Check it worked:
+
+```bash
+cargo --version
+```
+
+2. Restart your terminal.
+
+3. Create some folders
+
+```bash
+mkdir -p ~/src/ ~/.local/bin
+```
+
+4. Access the src dir and clone the repos:
+
+```bash
+cd ~/src
+```
+
+```bash
+git clone https://github.com/helix-editor/helix
+git clone https://github.com/sxyazi/yazi.git
+```
+
+### Helix
+
+5. Build Helix
+
+```bash
+cd ~/src/helix
+cargo install --path helix-term --locked
+```
+
+6. Symlink the runtime
+
+```bash
+rm -rf ~/.config/helix/runtime && ln -s "$PWD/runtime" ~/.config/helix/runtime
+```
+
+### Yazi
+
+7. Build Yazi
+
+```bash
+cd ~/src/yazi
+cargo build --release --locked
+```
+
+8. Move binaries to local bin
+
+```bash
+mv target/release/yazi target/release/ya ~/.local/bin
+```
+
+9. Add to path
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
 
 ## Homebrew
 
@@ -130,7 +204,7 @@ The file is in `~/.config/homebrew/Brewfile`, so you'll want to make a copy of t
 
 ## Markdown live preview (Helix users only - this is covered in nvim)
 
-If you are using my neovim config, live preview of html / md files cah be achieved using the keymap: `<leader>ls`. 
+If you are using my neovim config, live preview of html / md files cah be achieved using the keymap: `<leader>ls`.
 
 This is not possible in Helix yet, so we can use a github cli extension:
 
