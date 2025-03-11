@@ -157,7 +157,11 @@ cargo build --release --locked
 8. Move binaries to local bin
 
 ```bash
-mv target/release/yazi target/release/ya ~/.local/bin
+sudo mkdir -p /usr/local/bin
+```
+
+```bash
+sudo mv target/release/yazi target/release/ya ~/.local/bin
 ```
 
 9. Add to path
