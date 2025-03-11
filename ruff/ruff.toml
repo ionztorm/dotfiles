@@ -1,3 +1,4 @@
+target-version = "py312"
 exclude = [
     ".bzr",
     ".direnv",
