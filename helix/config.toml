@@ -70,6 +70,7 @@ G="goto_file_end"
     ":write-all", 
     ":new", 
     ":insert-output lazygit", 
+    ':insert-output echo "\x1b[?1049h" > /dev/tty',
     ":set mouse false", # First disable mouse to hint helix into activating it
     ":set mouse true",
     ":buffer-close!", 
