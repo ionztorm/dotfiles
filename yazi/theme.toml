@@ -5,4 +5,5 @@
 # dark = "gruvbox-dark"
 # use = "kanagawa"
 # dark = "kanagawa"
-use = "vscode-dark-plus"
+# use = "vscode-dark-plus"
+dark = "ashen"

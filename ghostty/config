@@ -16,8 +16,8 @@ clipboard-write = allow
 # window-padding-color = extend-always
 
 # config files
-config-file = ./theme/dark_plus
-config-file = ./font/monolisa
+config-file = ./theme/ashen
+config-file = ./font/jetbrains-mono
 config-file = ./opacity/80
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only

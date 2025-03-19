@@ -47,6 +47,15 @@
           }
         },
         {
+          "type": "python",
+          "foreground": "#FFD43B",
+          "style": "plain",
+          "properties": {
+            "display_mode": "context"
+          },
+          "template": "{{ if .Venv }}  {{ end }}"
+        },
+        {
           "foreground": "#BF616A",
           "style": "plain",
           "template": " \u2717",

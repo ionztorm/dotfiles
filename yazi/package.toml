@@ -20,3 +20,8 @@ hash = "cada780385f75abbcfbf5343256b441"
 use = "marcosvnmelo/kanagawa-dragon"
 rev = "2ddff30"
 hash = "c9e9fcf6b11c9fe63d4ac7c9408f628c"
+
+[[flavor.deps]]
+use = "ficcdaf/ashen:ashen"
+rev = "ef7c6c6"
+hash = "ba76e7f27d9d957be4469dbefe5efaf6"
