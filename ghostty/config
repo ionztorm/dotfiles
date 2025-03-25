@@ -16,7 +16,7 @@ window-padding-color = extend-always
 
 # config files
 # -------------------------------------
-config-file = ./theme/ayu-mirage
+config-file = ./theme/catppuccin-mocha
 config-file = ./font/berkeley-mono
 # config-file = ./opacity/90
 # config-file = ./blur/50
