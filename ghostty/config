@@ -12,7 +12,7 @@ auto-update-channel = tip
 clipboard-read = allow
 clipboard-write = allow
 
-window-padding-color = extend-always
+# window-padding-color = extend-always
 
 # config files
 # -------------------------------------

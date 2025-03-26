@@ -1,26 +1,33 @@
+# =============================================================================
+# Theme
+# =============================================================================
+
 theme = "catppuccin_mocha"
+
+# =============================================================================
+# Settings
+# =============================================================================
 
 [editor]
 true-color = true
 undercurl = true
 color-modes = true
-popup-border = "all"
 line-number = "relative"
 cursorline = true
-auto-completion = true
-auto-format = true
-text-width = 80
+popup-border = "all"
+completion-replace = true
 rulers = [80]
 indent-heuristic = "tree-sitter"
+end-of-line-diagnostics = "info"
 
-[editor.smart-tab]
-enable = true
-
-[editor.inline-diagnostics]
-cursor-line = "info"
-other-lines = "warning"
-max-wrap = 20
-max-diagnostics = 10
+[editor.statusline]
+left = ["mode", "version-control", "file-name", "file-modification-indicator", "read-only-indicator", "spinner"]
+center = ["workspace-diagnostics", "diagnostics"]
+right = ["selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -33,50 +40,58 @@ hidden = false
 [editor.indent-guides]
 render = true
 skip-levels = 1
-character = "▏"  #"╎" # "▏", "┆", "┊"
-
-[editor.whitespace.render]
-space = "none"
-tab = "none"
-nbsp = "none"
-nnbsp = "none"
-newline = "none"
+character = "▏"
 
 [editor.soft-wrap]
 enable = true
-wrap-indicator = "↩ "
 
-[editor.lsp]
-display-messages = true
-# display-inlay-hints = true
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "disable"
+max-wrap = 10
+max-diagnostics = 10
+prefix-len = 1
+
+# =============================================================================
+# Keymaps
+# =============================================================================
 
 [keys.normal]
 # cancel selection and return to original position
 esc = ["collapse_selection", "keep_primary_selection"]
+
 # move selected text up
 "S-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+
 # move selected text down
 "S-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
 # Go to the end of the document
 G="goto_file_end"
+
 # go to the next paragraph
 "{" = ["goto_next_paragraph"]
+
 # go to previous paragraph
 "}" = ["goto_prev_paragraph"]
+
 # move hella fast
 "*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+
 # opens lazygit (if installed)
- C-g = [
-    ":write-all", 
-    ":new", 
-    ":insert-output lazygit", 
-    ':insert-output echo "\x1b[?1049h" > /dev/tty',
-    ":set mouse false", # First disable mouse to hint helix into activating it
-    ":set mouse true",
-    ":buffer-close!", 
-    ":redraw", 
-    ":reload-all"
+C-g = [
+  ":write-all", 
+  ":new", 
+  ":insert-output lazygit", 
+  ':insert-output echo "\x1b[?1049h" > /dev/tty',
+  ":set mouse false", # First disable mouse to hint helix into activating it
+  ":set mouse true",
+  ":buffer-close!", 
+  ":redraw", 
+  ":reload-all"
 ]
+
+# opens Yazi (if installed - requires build from source)
 C-e = [
   ':sh rm -f /tmp/unique-file',
   ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
@@ -91,6 +106,10 @@ C-e = [
 q = ":quit"
 w = ":write"
 "*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+
+space.r = ":config-reload"
+space.l = ":lsp-restart"
+space.q = ":write-quit-all"
 
 # togglers
 [keys.normal.space.t]
