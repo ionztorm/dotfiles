@@ -226,7 +226,7 @@ gh markdown-preview <path/file name>
 
 This loads the markdown file in your browser with github formatting. It uses a live server so updates on save.
 
-### Tmux
+## Tmux
 
 Tmux is a `T`erminal `Mu`ltiple`x`er - basically it allows you to create sessions that you can attach to and detach from, but the sessions remain active (as long as the device remains turned on). You can create a session for a particular development project, with servers running, detatch from it and re-attach at a later date to find the server still running and your code editor still active.
 
@@ -235,6 +235,17 @@ Before you get started, you'll want to install the plugin manager:
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
 ```
+
+### Tmux Theme
+
+Install with:
+
+```bash
+mkdir -p ~/.config/tmux/plugins/catppuccin
+git clone -b v2.1.3 https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
+```
+
+### Create a session
 
 - Navigate to a project folder using the terminal
 
