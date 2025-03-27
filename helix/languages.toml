@@ -145,7 +145,7 @@ provideFormatter = true
 
 [[language]]
 name = "json"
-formatter = { command = 'prettier', args = ["--parser", "html"] }
+formatter = { command = 'prettier', args = ["--parser", "json"] }
 
 # =============================================================================
 # Database 💽
