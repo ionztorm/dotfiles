@@ -1,5 +1,5 @@
-function _git_staged_count
-    git diff --cached --name-status | wc -l
+function _git_commits_to_push
+    git rev-list --count @{u}..HEAD 2>/dev/null
 end
 
 function fish_prompt
@@ -79,18 +79,18 @@ function fish_prompt
 
     # Detect Python virtual environment
     if set -q VIRTUAL_ENV
-        set python_env " \UE73C"
+        set python_env (set_color yellow)" 󰌠 "(set_color normal)
     end
 
     if set -l repo_type (_repo_type)
         set -l repo_branch (set_color red)(_repo_branch_name $repo_type)
         set repo_info (set_color blue)" $repo_type:($repo_branch"(set_color blue)")"
 
-        # Git-specific additions: Check if there are staged commits
+        # Git-specific additions: Check if there are commits to push
         if test $repo_type = git
-            set -l staged_count (_git_staged_count)
-            if test "$staged_count" -gt 0
-                set git_status " ↑$staged_count"
+            set -l commits_to_push (_git_commits_to_push)
+            if test "$commits_to_push" -gt 0
+                set git_status (set_color green)" ↑$commits_to_push"(set_color normal)
             end
         end
 
