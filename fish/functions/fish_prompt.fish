@@ -77,7 +77,6 @@ function fish_prompt
     set -l python_env ''
     set -l git_status ''
 
-    # Detect Python virtual environment
     if set -q VIRTUAL_ENV
         set python_env (set_color yellow)" 󰌠 "(set_color normal)
     end
@@ -86,7 +85,6 @@ function fish_prompt
         set -l repo_branch (set_color red)(_repo_branch_name $repo_type)
         set repo_info (set_color blue)" $repo_type:($repo_branch"(set_color blue)")"
 
-        # Git-specific additions: Check if there are commits to push
         if test $repo_type = git
             set -l commits_to_push (_git_commits_to_push)
             if test "$commits_to_push" -gt 0
@@ -94,12 +92,10 @@ function fish_prompt
             end
         end
 
-        # Check if repo is dirty
         if _is_repo_dirty $repo_type
             set git_status "$git_status "(set_color yellow)"✗"
         end
     end
 
-    # Combine all parts
     echo -n -s $arrow ' ' $cwd $repo_info$git_status $python_env ' ' (set_color normal)
 end
