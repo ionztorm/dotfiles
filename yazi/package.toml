@@ -25,3 +25,8 @@ hash = "c9e9fcf6b11c9fe63d4ac7c9408f628c"
 use = "ficcdaf/ashen:ashen"
 rev = "ef7c6c6"
 hash = "ba76e7f27d9d957be4469dbefe5efaf6"
+
+[[flavor.deps]]
+use = "kmlupreti/ayu-dark"
+rev = "5412a78"
+hash = "60690920e8c0f9f81ff02009de5d156f"

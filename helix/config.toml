@@ -2,7 +2,7 @@
 # Theme
 # =============================================================================
 
-theme = "catppuccin_mocha"
+theme = "theme"
 
 # =============================================================================
 # Settings
@@ -21,10 +21,10 @@ indent-heuristic = "tree-sitter"
 end-of-line-diagnostics = "info"
 
 [editor.statusline]
-left = ["mode", "version-control", "file-name", "file-modification-indicator", "read-only-indicator", "spinner"]
+left = ["mode", "spacer", "version-control", "spacer", "separator", "file-name", "file-modification-indicator",  "read-only-indicator", "spinner"]
 center = ["workspace-diagnostics", "diagnostics"]
-right = ["selections", "position", "file-encoding", "file-line-ending", "file-type"]
-separator = "│"
+right = ["selections", "separator", "position", "file-encoding", "separator", "file-line-ending", "separator", "file-type"]
+separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
 mode.select = "SELECT"
