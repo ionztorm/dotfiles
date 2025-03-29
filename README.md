@@ -1,70 +1,75 @@
-# Dotfiles
+# Dotfiles Guide
 
 ## Contents
 
-- [I use ... btw](#i-use--btw)
-- [Install Brew](#install-brew)
-- [Clone the Files](#clone-the-files)
+- [Introduction](#introduction)
+- [Install Homebrew](#install-homebrew)
+- [Cloning Dotfiles](#cloning-dotfiles)
 - [Configuring Zsh](#configuring-zsh)
-  - [Adding Aliases for Homebrew](#adding-aliases-for-homebrew)
-- [Installing Software with Brewfile](#installing-software-with-brewfile)
+  - [Homebrew Aliases](#homebrew-aliases)
+- [Managing Software with Brewfile](#managing-software-with-brewfile)
   - [What is a Brewfile?](#what-is-a-brewfile)
-- [Switching to Fish Shell (After Installation)](#switching-to-fish-shell-after-installation)
-  - [Use Fish Temporarily (via .zshrc)](#use-fish-temporarily-via-zshrc)
-  - [Make Fish Your Default Shell](#make-fish-your-default-shell)
+  - [Installing All Packages](#installing-all-packages)
+- [Switching to Fish Shell](#switching-to-fish-shell)
+  - [Temporary Switch via .zshrc](#temporary-switch-via-zshrc)
+  - [Setting Fish as Default Shell](#setting-fish-as-default-shell)
 - [Building Helix & Yazi From Source](#building-helix-and-yazi-from-source)
-  - [Install Rust](#install-rust)
-  - [Clone Repositories](#clone-repositories)
+  - [Installing Rust](#installing-rust)
+  - [Cloning Repositories](#cloning-repositories)
   - [Building Helix](#building-helix)
   - [Building Yazi](#building-yazi)
+- [Additional Tips](#additional-tips)
+  - [Updating Brewfile](#updating-brewfile)
+  - [Markdown Live Preview](#markdown-live-preview)
+  - [Tmux Usage](#tmux-usage)
 
 ---
 
-## I use ... btw
+## Introduction
 
-I use:
+I use the following tools to enhance my development workflow:
 
-- [Ghostty Terminal](https://github.com/ghostty/ghostty)
-- [Fish Shell](https://github.com/fish-shell/fish-shell)
-- [Helix Editor](https://github.com/helix-editor/helix)
-- [Tmux Terminal Multiplexer](https://github.com/tmux/tmux)
-- [Yazi File Explorer](https://github.com/sxyazi/yazi)
-- [Lazygit](https://github.com/jesseduffield/lazygit) for git
-- [Homebrew Package Manager](https://brew.sh/)
+- **[Ghostty Terminal](https://github.com/ghostty/ghostty)**
+- **[Fish Shell](https://github.com/fish-shell/fish-shell)**
+- **[Helix Editor](https://github.com/helix-editor/helix)**
+- **[Tmux Terminal Multiplexer](https://github.com/tmux/tmux)**
+- **[Yazi File Explorer](https://github.com/sxyazi/yazi)**
+- **[Lazygit](https://github.com/jesseduffield/lazygit)** for git management
+- **[Homebrew Package Manager](https://brew.sh/)**
 
 Everything is themed with `Kanagawa`.
 
 ---
 
-## Install Brew
+## Install Homebrew
 
-You can [get Homebrew here](https://brew.sh/) for MacOS and Linux.
+You can install Homebrew for MacOS and Linux from their [official website](https://brew.sh/).
 
-The dotfiles come with a `Brewfile` to make package installation simple.
+The dotfiles include a `Brewfile` to simplify package installation.
 
 ---
 
-## Clone the Files
+## Cloning Dotfiles
 
-### Warning: Potential Data Loss
+### ⚠️ Warning: Potential Data Loss
 
-If you already have a `~/.config` directory, the following steps will **completely delete it**. This means you will lose all existing configuration files stored in `~/.config`. **Ensure you have a backup before proceeding.**
+If you have an existing `~/.config` directory, the steps below **will completely delete it**. Make sure you back up your configuration files before proceeding.
 
 ### Steps
 
-1. Backup your existing `.config` directory:
+1. **Backup Existing `.config` Directory:**
 
 ```bash
 mv ~/.config ~/.config_backup
 ```
 
-2. Delete the original `.config` directory:
+2. **Delete the Original `.config` Directory:**
 
 ```bash
 rm -rf ~/.config
 ```
 
-3. Clone the dotfiles repository:
+3. **Clone the Dotfiles Repository:**
 
 ```bash
 git clone https://github.com/ionztorm/dotfiles.git ~/.config
@@ -74,22 +79,20 @@ git clone https://github.com/ionztorm/dotfiles.git ~/.config
 
 ## Configuring Zsh
 
-### Adding Aliases for Homebrew
+### Homebrew Aliases
 
-Open your `.zshrc` file:
+Edit your `.zshrc` file:
 
 ```bash
 vi ~/.zshrc
 ```
 
-Add these aliases to simplify Brewfile management:
+Add these aliases for easier `Brewfile` management:
 
 ```bash
 alias bfi="brew bundle --file=~/.config/homebrew/Brewfile"
 alias bfc="brew bundle dump --file=~/.config/homebrew/Brewfile"
 ```
-
-Save and exit: Press `esc` and type `:wq`.
 
 Apply changes with:
 
@@ -99,21 +102,21 @@ source ~/.zshrc
 
 ---
 
-## Installing Software with Brewfile
+## Managing Software with Brewfile
 
 ### What is a Brewfile?
 
-A `Brewfile` is a convenient way to define and manage a list of Homebrew packages you want installed. It acts as a package list that Homebrew reads to automatically install, upgrade, or clean up software.
+A `Brewfile` is a simple way to define and manage your Homebrew packages. It allows you to install, upgrade, or clean up software with a single command.
 
-### Installation Command
+### Installing All Packages
 
-Run the following command to install all software listed in your `Brewfile`:
+To install all software listed in your `Brewfile`, run:
 
 ```bash
 bfi
 ```
 
-If you don't want to build Helix and Yazi from source, install the latest stable releases with:
+If you prefer not to build Helix and Yazi from source, use:
 
 ```bash
 brew install helix yazi
@@ -121,31 +124,31 @@ brew install helix yazi
 
 ---
 
-## Switching to Fish Shell (After Installation)
+## Switching to Fish Shell
 
-### Use Fish Temporarily (via `.zshrc`)
+### Temporary Switch via `.zshrc`
 
-Add this line to your `.zshrc` file to load Fish whenever you open a terminal session:
+Add this line to your `.zshrc` to start Fish when opening a terminal:
 
 ```bash
 echo 'exec fish' >> ~/.zshrc
 ```
 
-### Make Fish Your Default Shell
+### Setting Fish as Default Shell
 
-To set Fish as your default shell permanently:
+To permanently switch to Fish:
 
 ```bash
 chsh -s $(which fish)
 ```
 
-If Fish is not listed in your `/etc/shells`, add it manually:
+If Fish is not in your `/etc/shells`, add it:
 
 ```bash
 echo $(which fish) | sudo tee -a /etc/shells
 ```
 
-To switch back to Zsh:
+To revert to Zsh:
 
 ```bash
 chsh -s $(which zsh)
@@ -155,7 +158,7 @@ chsh -s $(which zsh)
 
 ## Building Helix & Yazi From Source
 
-### Install Rust
+### Installing Rust
 
 Install Rust:
 
@@ -163,46 +166,41 @@ Install Rust:
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Verify installation:
+Check installation:
 
 ```bash
 cargo --version
 ```
 
-### Clone Repositories
-
-Create source directory and clone the repositories:
+### Cloning Repositories
 
 ```bash
 mkdir -p ~/src/ ~/.local/bin
 cd ~/src
 ```
 
-Clone Helix and Yazi:
+Clone repositories:
 
 ```bash
 git clone https://github.com/helix-editor/helix
+
 git clone https://github.com/sxyazi/yazi.git
 ```
 
 ### Building Helix
-
-Build and install Helix:
 
 ```bash
 cd ~/src/helix
 cargo install --path helix-term --locked
 ```
 
-Symlink the runtime:
+Symlink runtime:
 
 ```bash
 rm -rf ~/.config/helix/runtime && ln -s "$PWD/runtime" ~/.config/helix/runtime
 ```
 
 ### Building Yazi
-
-Build Yazi:
 
 ```bash
 cd ~/src/yazi
@@ -217,3 +215,48 @@ sudo mv target/release/yazi target/release/ya /usr/local/bin
 ```
 
 ---
+
+## Additional Tips
+
+### Updating Brewfile
+
+Delete the current `Brewfile` and generate a new one:
+
+```bash
+rm ~/.config/homebrew/Brewfile
+bfc
+```
+
+### Markdown Live Preview
+
+For markdown live preview using GitHub formatting, install the CLI extension:
+
+```bash
+gh extension install yusukebe/gh-markdown-preview
+```
+
+To use:
+
+```bash
+gh markdown-preview <path/file name>
+```
+
+### Tmux Usage
+
+Install the Tmux plugin manager:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+```
+
+Basic commands:
+
+- `ctrl + s -> c`: Create new window
+- `ctrl + s -> ,`: Rename window
+- `ctrl + s -> x`: Close window
+- `ctrl + s -> <num>`: Switch between windows
+- `ctrl + s -> r`: Reload config
+
+Install plugins with: `ctrl + s -> I`
+
+Reload config with: `ctrl + s -> r`
