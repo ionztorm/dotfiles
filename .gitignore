@@ -4,7 +4,7 @@ gh
 bu
 testbuild
 envman
-.DS_Store
+*.DS_Store*
 *.kdl.bak.*
 backups
 zed/prompts/prompts-library-db.0.mdb/lock.mdb
