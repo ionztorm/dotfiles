@@ -4,7 +4,7 @@ adjust-cell-height = 10%
 mouse-hide-while-typing = true
 cursor-style-blink = true
 adjust-underline-position = 8
-adjust-underline-thickness = 2
+adjust-underline-thickness = 1
 auto-update-channel = tip
 
 # clipboard
@@ -17,7 +17,7 @@ clipboard-write = allow
 # config files
 # -------------------------------------
 config-file = ./theme/kanagawa
-config-file = ./font/berkeley-mono
+config-file = ./font/monolisa
 # config-file = ./opacity/90
 # config-file = ./blur/50
 config-file = ./keybind/keybinds

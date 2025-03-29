@@ -19,3 +19,4 @@ nvim
 wezterm
 zellij
 */runtime*
+tmux/plugins/*
