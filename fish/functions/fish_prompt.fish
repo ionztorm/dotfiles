@@ -35,7 +35,10 @@ function _is_git_repo
 end
 
 function fish_prompt
-    source ~/.config/fish/themes/kanagawa.fish
+    # source ~/.config/fish/themes/dark-plus.fish
+    # source ~/.config/fish/themes/kanagawa.fish
+    source ~/.config/fish/themes/catppuccin_mocha.fish
+
     set -l __last_command_exit_status $status
 
     if not set -q -g __fish_arrow_functions_defined
