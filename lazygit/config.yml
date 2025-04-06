@@ -1,31 +1,30 @@
-# gui:
-  # Catppuccin Mocha
-  # theme:
-  #   activeBorderColor:
-  #     - '#f5e0dc'
-  #     - bold
-  #   inactiveBorderColor:
-  #     - '#a6adc8'
-  #   optionsTextColor:
-  #     - '#89b4fa'
-  #   selectedLineBgColor:
-  #     - '#313244'
-  #   cherryPickedCommitBgColor:
-  #     - '#45475a'
-  #   cherryPickedCommitFgColor:
-  #     - '#f5e0dc'
-  #   unstagedChangesColor:
-  #     - '#f38ba8'
-  #   defaultFgColor:
-  #     - '#cdd6f4'
-  #   searchingActiveBorderColor:
-  #     - '#f9e2af'
+ # Catppuccin Mocha
+ gui:
+   theme:
+     activeBorderColor:
+       - '#f5e0dc'
+       - bold
+     inactiveBorderColor:
+       - '#a6adc8'
+     optionsTextColor:
+       - '#89b4fa'
+     selectedLineBgColor:
+       - '#313244'
+     cherryPickedCommitBgColor:
+       - '#45475a'
+     cherryPickedCommitFgColor:
+       - '#f5e0dc'
+     unstagedChangesColor:
+       - '#f38ba8'
+     defaultFgColor:
+       - '#cdd6f4'
+     searchingActiveBorderColor:
+       - '#f9e2af'
 
-  # authorColors:
-  #   '*': '#b4befe'
-  #
+   authorColors:
+     '*': '#b4befe'
 
-  # Ayu Mirage
+ # Ayu Mirage
   # theme:
   #   activeBorderColor:
   #     - '#FFD173'
@@ -107,27 +106,27 @@
   #   defaultFgColor:
   #     - "#d5d5d5"
 
-gui:
-  theme:
-    activeBorderColor:
-      - '#7E9CD8'          # Blue for active borders (Light Blue)
-      - bold
-    inactiveBorderColor:
-      - '#6B85A0'          # Muted Blue for inactive borders
-    optionsTextColor:
-      - '#7AA89F'          # Cyan for help text (Commands)
-    selectedLineBgColor:
-      - '#2D4F67'          # Muted Blue (Selection)
-    cherryPickedCommitBgColor:
-      - '#957FB8'          # Soft Purple (Cherry-picked commits)
-    cherryPickedCommitFgColor:
-      - '#DCD7BA'          # Foreground (Soft Beige)
-    unstagedChangesColor:
-      - '#C34043'          # Muted Red (Unstaged Changes)
-    defaultFgColor:
-      - '#DCD7BA'          # Foreground color (Soft Beige)
-    searchingActiveBorderColor:
-      - '#FF9E64'          # Bright Orange for search borders
-  authorColors:
-    '*': '#76946A'          # Subtle Green (Authors)
+# gui:
+#   theme:
+#     activeBorderColor:
+#       - '#7E9CD8'          # Blue for active borders (Light Blue)
+#       - bold
+#     inactiveBorderColor:
+#       - '#6B85A0'          # Muted Blue for inactive borders
+#     optionsTextColor:
+#       - '#7AA89F'          # Cyan for help text (Commands)
+#     selectedLineBgColor:
+#       - '#2D4F67'          # Muted Blue (Selection)
+#     cherryPickedCommitBgColor:
+#       - '#957FB8'          # Soft Purple (Cherry-picked commits)
+#     cherryPickedCommitFgColor:
+#       - '#DCD7BA'          # Foreground (Soft Beige)
+#     unstagedChangesColor:
+#       - '#C34043'          # Muted Red (Unstaged Changes)
+#     defaultFgColor:
+#       - '#DCD7BA'          # Foreground color (Soft Beige)
+#     searchingActiveBorderColor:
+#       - '#FF9E64'          # Bright Orange for search borders
+#   authorColors:
+#     '*': '#76946A'          # Subtle Green (Authors)
 
