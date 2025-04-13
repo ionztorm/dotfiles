@@ -18,11 +18,11 @@ auto-format = true
 [language-server.basedpyright]
 command = "basedpyright-langserver"
 args = ["--stdio"]
+except-features = ["format", "code-action"]
 
 [language-server.ruff]
 command = "ruff"
-args = ["server", "--preview"] # --preview
-environment = { "RUFF_TRACE" = "messages" }
+args = ["server"]
 
 [language-server.basedpyright.config.basedpyright.analysis]
 autoSearchPaths = true
@@ -31,35 +31,19 @@ diagnosticMode = "openFilesOnly"
 autoImportCompletions = true
 
 [language-server.ruff.config.settings]
-lineLength = 80
-logLevel = "debug"
+# logLevel = "debug"
 configuration = "~/.config/ruff/ruff.toml"
 
 [[language]]
 name = "python"
 language-id = "python"
-roots = ["pyproject.toml", "poetry.lock", ".git", ".venv/"]
+# roots = ["pyproject.toml", "poetry.lock", ".git", ".venv/"]
 language-servers = ["ruff", "basedpyright"]
-# formatter = { command = "ruff", args = ["format", "-" ] }
-formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
-file-types = ["py", "ipynb"]
-comment-token = "#"
-shebangs = ["python"]
+# formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
 auto-format = true
-
-# [language-server.ruff.config.settings.lint]
-# select = ["E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "W", "D", "UP", "ANN", "ASYNC", "S", "RET", "TCH", "ARG", "PTH", "DOC"]
-# preview = true
-
-# [language-server.ruff.config.settings.format]
-# preview = true
-# quote-style = "double"
-# docstring-code-format = true
-# indent-style = "space"
-
-# [language-server.pylsp.config.pylsp]
-# plugins.ruff.enabled = true
-# plugins.black.enabled = false
+# file-types = ["py", "ipynb"]
+# comment-token = "#"
+# shebangs = ["python"]
 
 # =============================================================================
 # Frontend 🌐

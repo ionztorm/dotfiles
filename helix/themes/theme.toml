@@ -1,17 +1,16 @@
 # inherits = "kanagawa"
-# "ui.background" ={}
+# inherits = "ayu_mirage"
+inherits = "dark_plus"
+# inherits = "catppuccin_mocha"
+
+"ui.background" = {}
+
+# kanagawa edits
 # "ui.linenr" = { fg = "dragonBlack6" }
 # "ui.gutter" = { fg = "sumiInk6" }
 # "keyword" = { fg = "oniViolet"}
 # "variable.builtin" = { fg = "waveRed", modifiers = ["italic"] }
 
-# inherits = "dark_plus"
-# "ui.background" = {}
-# "comment" = { fg = "dark_gray" }
-# "ui.statusline.insert" = { fg = "dark_gray2", bg = "pale_green" }
-
-# inherits = "ayu_mirage"
-# "ui.background" = {}
-
-inherits = "catppuccin_mocha"
-"ui.background" = {}
+# dark plus edits
+"comment" = { fg = "dark_gray" }
+"ui.statusline.insert" = { fg = "dark_gray2", bg = "pale_green" }

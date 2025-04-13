@@ -1,4 +1,4 @@
-target-version = "py312"
+target-version = "py39"
 exclude = [
     ".bzr",
     ".direnv",
@@ -33,10 +33,7 @@ line-length = 80
 indent-width = 4
 
 [lint]
-select = [
-    "E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "UP",
-    "ANN", "ASYNC", "S", "RET", "TCH", "ARG", "PTH"
-]
+select = ["E", "F", "W", "B", "I", "RUF", "N", "LOG", "ERA", "UP", "ANN", "ASYNC", "S", "RET", "ARG", "PTH"]
 # "D"
 ignore = [
     "D203", "D213"
@@ -59,9 +56,3 @@ indent-style = "space"
 line-ending = "auto"
 docstring-code-format = true
 docstring-code-line-length = "dynamic"
-
-# [isort]
-# combine-as-imports = true
-# force-single-line = false
-# sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
-# default-section = "THIRDPARTY"

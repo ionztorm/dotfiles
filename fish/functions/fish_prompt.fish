@@ -35,9 +35,9 @@ function _is_git_repo
 end
 
 function fish_prompt
-    # source ~/.config/fish/themes/dark-plus.fish
+    source ~/.config/fish/themes/dark-plus.fish
     # source ~/.config/fish/themes/kanagawa.fish
-    source ~/.config/fish/themes/catppuccin_mocha.fish
+    # source ~/.config/fish/themes/catppuccin_mocha.fish
 
     set -l __last_command_exit_status $status
 
@@ -63,7 +63,7 @@ function fish_prompt
     set -l git_status ''
 
     if set -q VIRTUAL_ENV
-        set python_env (set_color $yellow)" 󰌠 "(set_color $normal)
+        set python_env (string join '' (set_color $yellow) ' 󰌠 ' (set_color normal))
     end
 
     if _is_git_repo
