@@ -35,9 +35,7 @@ function _is_git_repo
 end
 
 function fish_prompt
-    source ~/.config/fish/themes/dark-plus.fish
-    # source ~/.config/fish/themes/kanagawa.fish
-    # source ~/.config/fish/themes/catppuccin_mocha.fish
+    source ~/.config/fish/themes/ashen.fish
 
     set -l __last_command_exit_status $status
 
@@ -45,9 +43,9 @@ function fish_prompt
         set -g __fish_arrow_functions_defined
     end
 
-    set -l arrow_color (set_color $green)
+    set -l arrow_color (set_color $prompt_success)
     if test $__last_command_exit_status != 0
-        set arrow_color (set_color $red)
+        set arrow_color (set_color $prompt_error)
     end
 
     set -l arrow "$arrow_color➜ "
@@ -55,7 +53,7 @@ function fish_prompt
         set arrow "$arrow_color# "
     end
 
-    set -l cwd_color (set_color $cyan)
+    set -l cwd_color (set_color $prompt_info)
     set -l cwd "$cwd_color"(prompt_pwd | path basename)
 
     set -l repo_info
@@ -63,12 +61,12 @@ function fish_prompt
     set -l git_status ''
 
     if set -q VIRTUAL_ENV
-        set python_env (string join '' (set_color $yellow) ' 󰌠 ' (set_color normal))
+        set python_env (string join '' (set_color $prompt_accent) ' 󰌠 ' (set_color normal))
     end
 
     if _is_git_repo
-        set -l repo_branch (set_color red)(_git_branch_name)
-        set repo_info (set_color $blue)" git:($repo_branch"(set_color $blue)")"
+        set -l repo_branch (set_color $prompt_error)(_git_branch_name)
+        set repo_info (set_color $prompt_git_wrapper)" git:($repo_branch"(set_color $prompt_git_wrapper)")"
 
         set -l commits_to_push (_git_commits_to_push)
         if test "$commits_to_push" -gt 0
@@ -81,7 +79,7 @@ function fish_prompt
         end
 
         if _is_git_dirty
-            set git_status "$git_status "(set_color yellow)"✗"
+            set git_status "$git_status "(set_color $prompt_accent)"✗"
         end
     end
 
