@@ -16,7 +16,7 @@ clipboard-write = allow
 
 # config files
 # -------------------------------------
-config-file = ./theme/dark_plus
+config-file = ./theme/ashen
 config-file = ./font/monolisa
 # config-file = ./opacity/90
 config-file = ./blur/50
