@@ -5,6 +5,7 @@
 inherits = "ashen"
 
 "ui.background" = {}
+"ui.virtual.ruler" = {bg ="g_10"}
 
 # kanagawa edits
 # "ui.linenr" = { fg = "dragonBlack6" }
