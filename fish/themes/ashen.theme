@@ -8,7 +8,7 @@ fish_color_param D5D5D5
 fish_color_keyword B14242 -o
 fish_color_quote DF6464
 fish_color_redirection E49A44
-fish_color_end E49A44
+fish_color_end C4693E
 fish_color_comment 737373 -i
 fish_color_error B14242
 fish_color_gray 737373

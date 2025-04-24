@@ -7,7 +7,7 @@ SETUVAR fish_color_cancel:B14242
 SETUVAR fish_color_command:C4693D\x1e\x2do
 SETUVAR fish_color_comment:737373\x1e\x2di
 SETUVAR fish_color_cwd:4A8B8B
-SETUVAR fish_color_end:E49A44
+SETUVAR fish_color_end:C4693E
 SETUVAR fish_color_error:B14242
 SETUVAR fish_color_escape:D5D5D5
 SETUVAR fish_color_gray:737373
