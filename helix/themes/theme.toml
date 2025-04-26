@@ -1,8 +1,8 @@
 # inherits = "kanagawa"
 # inherits = "ayu_mirage"
-# inherits = "dark_plus"
+inherits = "dark_plus"
 # inherits = "catppuccin_mocha"
-inherits = "ashen"
+# inherits = "ashen"
 
 "ui.background" = {}
 "ui.virtual.ruler" = {bg ="g_10"}
@@ -14,5 +14,5 @@ inherits = "ashen"
 # "variable.builtin" = { fg = "waveRed", modifiers = ["italic"] }
 
 # dark plus edits
-# "comment" = { fg = "dark_gray" }
-# "ui.statusline.insert" = { fg = "dark_gray2", bg = "pale_green" }
+"comment" = { fg = "dark_gray" }
+"ui.statusline.insert" = { fg = "dark_gray2", bg = "pale_green" }

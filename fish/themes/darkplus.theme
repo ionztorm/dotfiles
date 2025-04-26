@@ -1,0 +1,28 @@
+# name: 'Dark Plus'
+
+fish_color_normal D4D4D4
+fish_color_command 569CD6
+fish_color_param C586C0
+fish_color_keyword 4EC9B0
+fish_color_quote C586C0
+fish_color_redirection F44747
+fish_color_end 569CD6
+fish_color_comment 808080
+fish_color_error F44747
+fish_color_gray 808080
+fish_color_selection --background="264F78"
+fish_color_search_match --background="264F78"
+fish_color_option DCDCAA
+fish_color_operator DCDCAA
+fish_color_escape D4D4D4
+fish_color_autosuggestion 6A9955
+fish_color_cancel F44747
+fish_color_cwd 4EC9B0
+fish_color_user F44747
+fish_color_host 569CD6
+fish_color_host_remote 569CD6
+fish_color_status DCDCAA
+fish_pager_color_progress DCDCAA
+fish_pager_color_prefix DCDCAA
+fish_pager_color_completion D4D4D4
+fish_pager_color_description 808080
