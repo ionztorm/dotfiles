@@ -1,0 +1,12 @@
+font-family = IBM Plex Mono
+font-style = Regular
+font-style-bold = ExtraBold
+font-style-italic = Oblique
+font-style-bold-italic = ExtraBold Oblique
+font-feature = ss02
+adjust-cell-height = 7
+adjust-cursor-height = 7
+adjust-box-thickness = 1
+font-thicken = true
+font-size = 15
+   
