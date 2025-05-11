@@ -30,3 +30,13 @@ hash = "ba76e7f27d9d957be4469dbefe5efaf6"
 use = "kmlupreti/ayu-dark"
 rev = "5412a78"
 hash = "60690920e8c0f9f81ff02009de5d156f"
+
+[[flavor.deps]]
+use = "atareao/ayu-mirage"
+rev = "28910c8"
+hash = "761abaaefd076d9753daef75731d73c3"
+
+[[flavor.deps]]
+use = "ionztorm/ayu-mirage"
+rev = "2507ee1"
+hash = "f3c0cd3f7b425021eeb31e38c102caba"

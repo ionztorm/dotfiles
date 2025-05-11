@@ -16,9 +16,9 @@ auto-format = true
 # =============================================================================
 # 
 [language-server.basedpyright]
-command = "basedpyright-langserver"
-args = ["--stdio"]
 except-features = ["format", "code-action"]
+
+
 
 [language-server.ruff]
 command = "ruff"
@@ -37,11 +37,10 @@ configuration = "~/.config/ruff/ruff.toml"
 [[language]]
 name = "python"
 language-id = "python"
-# roots = ["pyproject.toml", "poetry.lock", ".git", ".venv/"]
-language-servers = ["ruff", "basedpyright"]
-# formatter = { command = "bash", args = ["-c", "ruff check --fix - | ruff format -"] }
+roots = ["pyproject.toml", "poetry.lock", ".git", ".venv/"]
+language-servers = ["ruff", "basedpyright" ]
 auto-format = true
-# file-types = ["py", "ipynb"]
+file-types = ["py", "ipynb"]
 # comment-token = "#"
 # shebangs = ["python"]
 
