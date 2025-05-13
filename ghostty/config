@@ -18,7 +18,7 @@ clipboard-write = allow
 # -------------------------------------
 config-file = ./theme/gruvbox-material
 config-file = ./font/geist
-# config-file = ./opacity/90
-# config-file = ./blur/50
+config-file = ./opacity/95
+config-file = ./blur/50
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only
