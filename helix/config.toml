@@ -19,6 +19,7 @@ completion-replace = true
 rulers = [80]
 indent-heuristic = "tree-sitter"
 end-of-line-diagnostics = "info"
+bufferline = "multiple"
 
 [editor.statusline]
 left = ["mode", "spacer", "version-control", "spacer", "separator", "file-name", "file-modification-indicator",  "read-only-indicator", "spinner"]

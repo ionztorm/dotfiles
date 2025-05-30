@@ -1,7 +1,7 @@
 # inherits = "kanagawa"
-inherits = "gruvbox-material"
+# inherits = "gruvbox-material"
 # inherits = "dark_plus"
-# inherits = "catppuccin_mocha"
+inherits = "catppuccin_mocha"
 # inherits = "ashen"
 
 "ui.background" = {}

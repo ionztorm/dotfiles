@@ -1,7 +1,6 @@
 [flavor]
-# light = "catppucin-mocha"
-# dark = "catppuccin-mocha"
-# use = "catppuccin-mocka"
+light = "catppucin-mocha"
+dark = "catppuccin-mocha"
 # dark = "tokyo-night"
 # dark = "gruvbox-dark"
 # use = "kanagawa"
