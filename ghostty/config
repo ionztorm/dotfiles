@@ -17,7 +17,7 @@ clipboard-write = allow
 # config files
 # -------------------------------------
 config-file = ./theme/catppuccin-mocha
-config-file = ./font/jetbrains-mono
+config-file = ./font/monolisa
 config-file = ./opacity/95
 config-file = ./blur/50
 config-file = ./keybind/keybinds
