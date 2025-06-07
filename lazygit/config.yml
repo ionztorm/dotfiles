@@ -1,5 +1,5 @@
  # Catppuccin Mocha
- # gui:
+ gui:
    theme:
      activeBorderColor:
        - '#f5e0dc'
