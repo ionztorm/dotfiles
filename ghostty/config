@@ -4,7 +4,7 @@ adjust-cell-height = 10%
 mouse-hide-while-typing = true
 cursor-style-blink = true
 adjust-underline-position = 8
-adjust-underline-thickness = 1
+# adjust-underline-thickness = 1
 auto-update-channel = tip
 
 # clipboard
