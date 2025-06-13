@@ -16,7 +16,7 @@ clipboard-write = allow
 
 # config files
 # -------------------------------------
-config-file = ./theme/catppuccin-mocha
+config-file = ./theme/github-dark-dimmed
 config-file = ./font/monolisa
 config-file = ./opacity/95
 config-file = ./blur/50

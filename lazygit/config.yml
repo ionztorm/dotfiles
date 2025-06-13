@@ -1,28 +1,28 @@
  # Catppuccin Mocha
- gui:
-   theme:
-     activeBorderColor:
-       - '#f5e0dc'
-       - bold
-     inactiveBorderColor:
-       - '#a6adc8'
-     optionsTextColor:
-       - '#89b4fa'
-     selectedLineBgColor:
-       - '#313244'
-     cherryPickedCommitBgColor:
-       - '#45475a'
-     cherryPickedCommitFgColor:
-       - '#f5e0dc'
-     unstagedChangesColor:
-       - '#f38ba8'
-     defaultFgColor:
-       - '#cdd6f4'
-     searchingActiveBorderColor:
-       - '#f9e2af'
+ # gui:
+ #   theme:
+ #     activeBorderColor:
+ #       - '#f5e0dc'
+ #       - bold
+ #     inactiveBorderColor:
+ #       - '#a6adc8'
+ #     optionsTextColor:
+ #       - '#89b4fa'
+ #     selectedLineBgColor:
+ #       - '#313244'
+ #     cherryPickedCommitBgColor:
+ #       - '#45475a'
+ #     cherryPickedCommitFgColor:
+ #       - '#f5e0dc'
+ #     unstagedChangesColor:
+ #       - '#f38ba8'
+ #     defaultFgColor:
+ #       - '#cdd6f4'
+ #     searchingActiveBorderColor:
+ #       - '#f9e2af'
 
-   authorColors:
-     '*': '#b4befe'
+ #   authorColors:
+ #     '*': '#b4befe'
 
  # Ayu Mirage
 # gui:
@@ -133,3 +133,29 @@
 #   authorColors:
 #     '*': '#76946A'          # Subtle Green (Authors)
 
+# GitHub Dark Dimmed (Readable Borders)
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#cdd9e5'        # scale.gray.0 — lightest gray for max contrast
+      - bold
+    inactiveBorderColor:
+      - '#768390'        # fg.muted — softer but still visible
+    optionsTextColor:
+      - '#6cb6ff'        # scale.blue.2
+    selectedLineBgColor:
+      - '#2d333b'        # canvas.subtle
+    cherryPickedCommitBgColor:
+      - '#444c56'        # border.default
+    cherryPickedCommitFgColor:
+      - '#adbac7'        # fg.default
+    unstagedChangesColor:
+      - '#e5534b'        # danger.fg
+    defaultFgColor:
+      - '#adbac7'        # fg.default
+    searchingActiveBorderColor:
+      - '#c69026'        # attention.fg
+
+  authorColors:
+    '*': '#6cb6ff'        # scale.blue.2

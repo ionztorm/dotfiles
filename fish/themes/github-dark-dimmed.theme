@@ -1,0 +1,28 @@
+# name: 'GitHub Dark Dimmed'
+
+fish_color_normal ADBAC7
+fish_color_command 539BF5
+fish_color_param DCBDFB
+fish_color_keyword F47067
+fish_color_quote 96D0FF
+fish_color_redirection E5534B
+fish_color_end 6CB6FF
+fish_color_comment 768390
+fish_color_error E5534B
+fish_color_gray 636E7B
+fish_color_selection --background=2D333B
+fish_color_search_match --background=2D333B
+fish_color_option 6CB6FF
+fish_color_operator 6CB6FF
+fish_color_escape DCBDFB
+fish_color_autosuggestion 545D68
+fish_color_cancel E5534B
+fish_color_cwd F47067
+fish_color_user ADBAC7
+fish_color_host 6CB6FF
+fish_color_host_remote 6CB6FF
+fish_color_status 768390
+fish_pager_color_progress 444C56
+fish_pager_color_prefix 6CB6FF
+fish_pager_color_completion ADBAC7
+fish_pager_color_description 636E7B
