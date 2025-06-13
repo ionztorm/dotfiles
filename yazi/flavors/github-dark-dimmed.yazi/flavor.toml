@@ -1,0 +1,51 @@
+# ~/.config/yazi/flavors/github-dark-dimmed.yazi/flavor.toml
+
+[flavor]
+name = "github-dark-dimmed"
+
+[mgr]
+cwd = { fg = "#F47067", bold = true }
+hovered = { bg = "#2d333b" }
+preview_hovered = { bg = "#2d333b" }
+find_keyword = { fg = "#96d0ff", underline = true }
+find_position = { fg = "#6cb6ff" }
+marker_copied = { fg = "#57ab5a", bold = true }
+marker_cut = { fg = "#e5534b", bold = true }
+marker_selected = { fg = "#adbac7", bg = "#2d333b", bold = true }
+border_symbol = "│"
+border_style = { fg = "#cdd9e5" }
+
+[tabs]
+active = { fg = "#6cb6ff", bold = true }
+inactive = { fg = "#545d68" }
+sep_inner = { open = "[", close = "]" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#adbac7", bg = "#22272e" }
+normal_alt = { fg = "#768390", bg = "#22272e" }
+select_main = { fg = "#adbac7", bg = "#444c56" }
+select_alt = { fg = "#768390", bg = "#444c56" }
+unset_main = { fg = "#adbac7", bg = "#2d333b" }
+unset_alt = { fg = "#768390", bg = "#2d333b" }
+
+[status]
+overall = { fg = "#adbac7", bg = "#2d333b" }
+sep_left = { open = "<", close = " ", fg = "#6cb6ff" }
+sep_right = { open = " ", close = ">", fg = "#6cb6ff" }
+perm_type = { fg = "#6cb6ff" }
+perm_read = { fg = "#6cb6ff" }
+perm_write = { fg = "#6cb6ff" }
+perm_exec = { fg = "#57ab5a" }
+perm_sep = { fg = "#6cb6ff" }
+progress_label  = { bold = true }
+progress_normal = { fg = "#6cb6ff", bg = "#22272e" }
+progress_error  = { fg = "#e5534b", bg = "#22272e" }
+
+[icon]
+prepend_dirs = [
+  { name = "*", text = "", fg = "#F47067" }
+]
+append_exts = [
+  { name = "rs", text = "", fg = "#6cb6ff" }
+]
