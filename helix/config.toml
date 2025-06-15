@@ -19,12 +19,11 @@ completion-replace = true
 rulers = [80]
 indent-heuristic = "tree-sitter"
 end-of-line-diagnostics = "info"
-bufferline = "multiple"
 
 [editor.statusline]
-left = ["version-control", "spacer", "workspace-diagnostics", "diagnostics", "file-modification-indicator"] #, "spacer", "version-control", "spacer", "separator", "file-name", "file-modification-indicator",  "read-only-indicator", "spinner"]
+left = ["version-control", "spacer", "workspace-diagnostics", "diagnostics", "file-modification-indicator"]
 center = []
-right = [] #"selections", "separator", "position", "file-encoding", "separator", "file-line-ending", "separator", "file-type"]
+right = []
 separator = "|"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
