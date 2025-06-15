@@ -37,7 +37,7 @@ I use the following tools to enhance my development workflow:
 - **[Lazygit](https://github.com/jesseduffield/lazygit)** for git management
 - **[Homebrew Package Manager](https://brew.sh/)**
 
-Everything is themed with `Kanagawa`.
+> **Note**: Everything is themed with `Github Dark Dimmed`. The lazygit, tmux, fish, and yazi themes are custom. Separate repo's will be created for these in due course.
 
 ---
 
