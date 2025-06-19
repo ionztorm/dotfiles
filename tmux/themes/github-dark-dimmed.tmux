@@ -40,4 +40,8 @@ set -g status-left '#[fg=#22272e,bg=#6cb6ff,bold] 󰈸 #S #[fg=#6cb6ff,bg=#22272
 # === Right Status ===
 # Show Git branch if inside a repo
 set -g status-right-length 150
-set -g status-right '#[fg=#e5534b]#(cd "#{pane_current_path}" && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && echo " $(git rev-parse --abbrev-ref HEAD)") #[fg=#768390] %c '
+set -g status-right '#[fg=#e5534b]#(cd "#{pane_current_path}" && git rev-parse --is-inside-work-tree >/dev/null 2>&1 && echo " $(git rev-parse --abbrev-ref HEAD)") #[fg=#986ee2,bg=#22272e,nobold]#[fg=#22272e,bg=#986ee2,bold]  %d/%m #[fg=#22272e,bg=#986ee2,nobold]#[fg=#6cb6ff,bg=#22272e,nobold]#[fg=#22272e,bg=#6cb6ff,bold]  %H:%M #[fg=#22272e,bg=#2]'
+
+
+# 986ee2 - purple
+# 6cb6ff - blue
