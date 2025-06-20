@@ -5,14 +5,11 @@
 [[language]]
 name = "go"
 auto-format = true
-formatter=["gofmt"]
+formatter = ["goimports"]
 language-servers = [ "gopls", "golangci-lint-lsp" ]
 
 [language-server.golangci-lint-lsp]
 command = "golangci-lint-langserver"
-
-[language-server.golangci-lint-lsp.config]
-command = ["golangci-lint", "run", "--out-format", "json", "--issues-exit-code=1"]
 
 [[language]]
 name = "templ"
