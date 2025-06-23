@@ -3,7 +3,8 @@
 # inherits = "dark_plus"
 # inherits = "catppuccin_mocha"
 # inherits = "ashen"
-inherits = "github_dark_dimmed"
+# inherits = "github_dark_dimmed"
+inherits = "ayu_mirage"
 
 "ui.background" = {}
 # "ui.virtual.ruler" = {bg ="g_10"}

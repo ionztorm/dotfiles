@@ -1,0 +1,63 @@
+# ~/.config/yazi/flavors/ayu-mirage.yazi/flavor.toml
+
+[flavor]
+name = "ayu-mirage"
+
+[mgr]
+cwd = { fg = "#ffad66", bold = true }
+hovered = { bg = "#323843" }
+preview_hovered = { bg = "#323843" }
+find_keyword = { fg = "#73d0ff", underline = true }
+find_position = { fg = "#73d0ff" }
+marker_copied = { fg = "#d5ff80", bold = true }
+marker_cut = { fg = "#f28779", bold = true }
+marker_selected = { fg = "#cccac2", bg = "#323843", bold = true }
+border_symbol = "│"
+border_style = { fg = "#565b66" }
+
+[tabs]
+active = { fg = "#73d0ff", bold = true }
+inactive = { fg = "#565b66" }
+sep_inner = { open = "[", close = "]" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+# normal_main = { fg = "#cccac2", bg = "#1f2430" }
+# normal_alt = { fg = "#565b66", bg = "#1f2430" }
+# select_main = { fg = "#cccac2", bg = "#323843" }
+# select_alt = { fg = "#565b66", bg = "#323843" }
+# unset_main = { fg = "#cccac2", bg = "#1f2430" }
+# unset_alt = { fg = "#565b66", bg = "#1f2430" }
+
+normal_main = { fg = "#1f2430", bg = "#73d0ff" }   # blue pill
+normal_alt  = { fg = "#1f2430", bg = "#73d0ff" }
+
+select_main = { fg = "#1f2430", bg = "#dfbfff" }   # magenta pill
+select_alt  = { fg = "#1f2430", bg = "#dfbfff" }
+
+unset_main  = { fg = "#1f2430", bg = "#ffcc77" }   # yellow pill
+unset_alt   = { fg = "#1f2430", bg = "#ffcc77" }
+
+
+[status]
+overall = { fg = "#cccac2", bg = "#1f2430" }
+sep_left = { open = "", close = "", fg = "#73d0ff" }   # rounded left
+sep_right = { open = "", close = "", fg = "#73d0ff" }  # rounded right
+perm_type = { fg = "#73d0ff" }
+perm_read = { fg = "#73d0ff" }
+perm_write = { fg = "#ffcc77" }
+perm_exec = { fg = "#d5ff80" }
+perm_sep = { fg = "#73d0ff" }
+progress_label  = { bold = true }
+progress_normal = { fg = "#73d0ff", bg = "#1f2430" }
+progress_error  = { fg = "#f28779", bg = "#1f2430" }
+
+
+
+[icon]
+prepend_dirs = [
+  { name = "*", text = "", fg = "#ffad66" }
+]
+append_exts = [
+  { name = "rs", text = "", fg = "#73d0ff" }
+]
