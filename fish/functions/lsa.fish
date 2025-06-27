@@ -1,4 +1,4 @@
-function lsa --wraps='ls -a' --description 'alias lsa=ls -a'
-  ls -a $argv
-        
+function lsa --wraps='eza -a' --description 'alias lsa=eza -a'
+    ls -a $argv
+
 end

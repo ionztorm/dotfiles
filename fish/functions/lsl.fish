@@ -1,4 +1,4 @@
-function lsl --wraps='ls -l' --description 'alias lsl=ls -l'
-  ls -l $argv
-        
+function lsl --wraps='eza -l' --description 'alias lsl=eza -l'
+    ls -l $argv
+
 end
