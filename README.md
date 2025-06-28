@@ -13,15 +13,15 @@
 - [Switching to Fish Shell](#switching-to-fish-shell)
   - [Temporary Switch via .zshrc](#temporary-switch-via-zshrc)
   - [Setting Fish as Default Shell](#setting-fish-as-default-shell)
-- [Building Helix & Yazi From Source](#building-helix-and-yazi-from-source)
+- [Building Helix and Yazi From Source](#building-helix-and-yazi-from-source)
   - [Installing Rust](#installing-rust)
   - [Cloning Repositories](#cloning-repositories)
   - [Building Helix](#building-helix)
-  - [Building Yazi](#building-yazi)
 - [Additional Tips](#additional-tips)
   - [Updating Brewfile](#updating-brewfile)
   - [Markdown Live Preview](#markdown-live-preview)
   - [Tmux Usage](#tmux-usage)
+  - [Zellij Usage](#zellij-usage)
 
 ---
 
