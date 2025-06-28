@@ -32,12 +32,14 @@ I use the following tools to enhance my development workflow:
 - **[Ghostty Terminal](https://github.com/ghostty/ghostty)**
 - **[Fish Shell](https://github.com/fish-shell/fish-shell)**
 - **[Helix Editor](https://github.com/helix-editor/helix)**
-- **[Tmux Terminal Multiplexer](https://github.com/tmux/tmux)**
+- **[Zellij](https://github.com/zellij-org/zellij)**
 - **[Yazi File Explorer](https://github.com/sxyazi/yazi)**
 - **[Lazygit](https://github.com/jesseduffield/lazygit)** for git management
 - **[Homebrew Package Manager](https://brew.sh/)**
 
-> **Note**: Everything is themed with `Github Dark Dimmed`. The lazygit, tmux, fish, and yazi themes are custom. Separate repo's will be created for these in due course.
+> **Note**: Everything is themed with `Ayu Mirage`. The lazygit, zellij, and yazi themes are custom made. I also include a theme for Tmux if you prefer that over Zellij
+
+- **[Tmux Terminal Multiplexer](https://github.com/tmux/tmux)**
 
 ---
 
@@ -57,19 +59,14 @@ If you have an existing `~/.config` directory, the steps below **will completely
 
 ### Steps
 
-1. **Backup Existing `.config` Directory:**
+1. **Backup and Remove Existing `.config` Directory:**
 
 ```bash
 mv ~/.config ~/.config_backup
-```
-
-2. **Delete the Original `.config` Directory:**
-
-```bash
 rm -rf ~/.config
 ```
 
-3. **Clone the Dotfiles Repository:**
+2. **Clone the Dotfiles Repository:**
 
 ```bash
 git clone https://github.com/ionztorm/dotfiles.git ~/.config
@@ -84,14 +81,8 @@ git clone https://github.com/ionztorm/dotfiles.git ~/.config
 Edit your `.zshrc` file:
 
 ```bash
-vi ~/.zshrc
-```
-
-Add these aliases for easier `Brewfile` management:
-
-```bash
-alias bfi="brew bundle --file=~/.config/homebrew/Brewfile"
-alias bfc="brew bundle dump --file=~/.config/homebrew/Brewfile"
+echo 'alias bfi="brew bundle --file=~/.config/homebrew/Brewfile"' >> ~/.zshrc
+echo 'alias bfc="brew bundle dump --file=~/.config/homebrew/Brewfile"' >> ~/.zshrc
 ```
 
 Apply changes with:
@@ -104,22 +95,16 @@ source ~/.zshrc
 
 ## Managing Software with Brewfile
 
-### What is a Brewfile?
-
-A `Brewfile` is a simple way to define and manage your Homebrew packages. It allows you to install, upgrade, or clean up software with a single command.
-
-### Installing All Packages
-
-To install all software listed in your `Brewfile`, run:
+Install all packages from my brewfile:
 
 ```bash
 bfi
 ```
 
-If you prefer not to build Helix and Yazi from source, use:
+I build helix from source, but if you prefer not to, use:
 
 ```bash
-brew install helix yazi
+brew install helix
 ```
 
 ---
@@ -134,33 +119,11 @@ Add this line to your `.zshrc` to start Fish when opening a terminal:
 echo 'exec fish' >> ~/.zshrc
 ```
 
-### Setting Fish as Default Shell
-
-To permanently switch to Fish:
-
-```bash
-chsh -s $(which fish)
-```
-
-If Fish is not in your `/etc/shells`, add it:
-
-```bash
-echo $(which fish) | sudo tee -a /etc/shells
-```
-
-To revert to Zsh:
-
-```bash
-chsh -s $(which zsh)
-```
-
 ---
 
-## Building Helix & Yazi From Source
+## Building Helix
 
 ### Installing Rust
-
-Install Rust:
 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -172,19 +135,19 @@ Check installation:
 cargo --version
 ```
 
+You may need to restart your terminal
+
 ### Cloning Repositories
 
 ```bash
-mkdir -p ~/src/ ~/.local/bin
+mkdir -p ~/src/
 cd ~/src
 ```
 
-Clone repositories:
+Clone repository:
 
 ```bash
 git clone https://github.com/helix-editor/helix
-
-git clone https://github.com/sxyazi/yazi.git
 ```
 
 ### Building Helix
@@ -200,31 +163,16 @@ Symlink runtime:
 rm -rf ~/.config/helix/runtime && ln -s "$PWD/runtime" ~/.config/helix/runtime
 ```
 
-### Building Yazi
-
-```bash
-cd ~/src/yazi
-cargo build --release --locked
-```
-
-Move binaries:
-
-```bash
-sudo mkdir -p /usr/local/bin
-sudo mv target/release/yazi target/release/ya /usr/local/bin
-```
-
 ---
 
 ## Additional Tips
 
 ### Updating Brewfile
 
-Delete the current `Brewfile` and generate a new one:
+To delete the current `Brewfile` and generate a new one, I include a fish alias:
 
 ```bash
-rm ~/.config/homebrew/Brewfile
-bfc
+bfr
 ```
 
 ### Markdown Live Preview
@@ -241,22 +189,20 @@ To use:
 gh markdown-preview <path/file name>
 ```
 
-### Tmux Usage
+### Zellij Usage
 
-Install the Tmux plugin manager:
+I include a number of fish alias' to make using zellij simpler.
 
-```bash
-git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-```
-
-Basic commands:
-
-- `ctrl + s -> c`: Create new window
-- `ctrl + s -> ,`: Rename window
-- `ctrl + s -> x`: Close window
-- `ctrl + s -> <num>`: Switch between windows
-- `ctrl + s -> r`: Reload config
-
-Install plugins with: `ctrl + s -> I`
-
-Reload config with: `ctrl + s -> r`
+| Alias  | Command         | Description                   |
+| ------ | --------------- | ----------------------------- |
+| `zj`   | `zellij`        | Base Zellij command           |
+| `zjs`  | `zellij -s`     | Start new session             |
+| `zja`  | `zellij attach` | Attach to a session           |
+| `zjls` | `zellij ls`     | List sessions                 |
+| `zjd`  | `zellij d`      | Delete session                |
+| `zjda` | `zellij da`     | Delete all sessions           |
+| `zjk`  | `zellij k`      | Kill session                  |
+| `zjka` | `zellij ka`     | Kill all sessions             |
+| `zjh`  | `zellij -h`     | Help                          |
+| `zjl`  | `zellij -l`     | List available layouts        |
+| `zjn`  | `zellij -n`     | Start new session with layout |
