@@ -390,7 +390,7 @@ themes {
 }
 
 
-theme "ayu"
+theme "catppuccin-macchiato"
  
 // Choose the base input mode of zellij.
 // Default: normal

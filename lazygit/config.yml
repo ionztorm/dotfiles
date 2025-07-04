@@ -1,53 +1,53 @@
  # Catppuccin Mocha
- # gui:
- #   theme:
- #     activeBorderColor:
- #       - '#f5e0dc'
- #       - bold
- #     inactiveBorderColor:
- #       - '#a6adc8'
- #     optionsTextColor:
- #       - '#89b4fa'
- #     selectedLineBgColor:
- #       - '#313244'
- #     cherryPickedCommitBgColor:
- #       - '#45475a'
- #     cherryPickedCommitFgColor:
- #       - '#f5e0dc'
- #     unstagedChangesColor:
- #       - '#f38ba8'
- #     defaultFgColor:
- #       - '#cdd6f4'
- #     searchingActiveBorderColor:
- #       - '#f9e2af'
+ gui:
+   theme:
+     activeBorderColor:
+       - '#f5e0dc'
+       - bold
+     inactiveBorderColor:
+       - '#a6adc8'
+     optionsTextColor:
+       - '#89b4fa'
+     selectedLineBgColor:
+       - '#313244'
+     cherryPickedCommitBgColor:
+       - '#45475a'
+     cherryPickedCommitFgColor:
+       - '#f5e0dc'
+     unstagedChangesColor:
+       - '#f38ba8'
+     defaultFgColor:
+       - '#cdd6f4'
+     searchingActiveBorderColor:
+       - '#f9e2af'
 
- #   authorColors:
- #     '*': '#b4befe'
+   authorColors:
+     '*': '#b4befe'
 
  # Ayu Mirage
-gui:
-  theme:
-    activeBorderColor:
-      - '#FFD173'
-      - bold
-    inactiveBorderColor:
-      - '#B8CFE6'
-    optionsTextColor:
-      - '#FFDFB3'
-    selectedLineBgColor:
-      - '#637599'
-    cherryPickedCommitBgColor:
-      - '#B8CFE6'
-    cherryPickedCommitFgColor:
-      - '#FFD173'
-    unstagedChangesColor:
-      - '#95E6CB'
-    defaultFgColor:
-      - '#CCCAC2'
-    searchingActiveBorderColor:
-      - '#F28779'
-  authorColors:
-    '*': '#80BFFF'
+# gui:
+#   theme:
+#     activeBorderColor:
+#       - '#FFD173'
+#       - bold
+#     inactiveBorderColor:
+#       - '#B8CFE6'
+#     optionsTextColor:
+#       - '#FFDFB3'
+#     selectedLineBgColor:
+#       - '#637599'
+#     cherryPickedCommitBgColor:
+#       - '#B8CFE6'
+#     cherryPickedCommitFgColor:
+#       - '#FFD173'
+#     unstagedChangesColor:
+#       - '#95E6CB'
+#     defaultFgColor:
+#       - '#CCCAC2'
+#     searchingActiveBorderColor:
+#       - '#F28779'
+#   authorColors:
+#     '*': '#80BFFF'
 
 # Ashen Theme
 # Author: Daniel Fichtinger

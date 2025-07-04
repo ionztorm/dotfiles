@@ -3,4 +3,5 @@ if status is-interactive
     set -x XDG_CONFIG_HOME $HOME/.config
     set -g fish_greeting
     zoxide init fish | source
+    starship init fish | source
 end
