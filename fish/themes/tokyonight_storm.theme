@@ -1,0 +1,28 @@
+# name: 'Tokyo Night Storm'
+
+fish_color_normal c0caf5                          # Variables, class names
+fish_color_command 7aa2f7                         # Function names, keywords
+fish_color_param bb9af7                           # Control keywords, storage types
+fish_color_keyword ff9e64                         # Constants (bool, number)
+fish_color_quote 9ece6a                           # Strings
+fish_color_redirection f7768e                     # Symbols, operators
+fish_color_end 7dcfff                             # Regex flags, Markdown headings
+fish_color_comment 565f89                         # Comments
+fish_color_error f7768e                           # Errors
+fish_color_gray 9aa5ce                            # Markdown / UI text
+fish_color_selection --background=33467c          # Selection (custom accent)
+fish_color_search_match --background=33467c       # Search match (custom accent)
+fish_color_option 7dcfff                          # Option flags
+fish_color_operator bb9af7                        # Operators
+fish_color_escape b4f9f8                          # Regex literal strings
+fish_color_autosuggestion 414868                  # Dim/gray autosuggestions
+fish_color_cancel f7768e                          # Cancel/error color
+fish_color_cwd e0af68                             # Function parameters (current dir)
+fish_color_user c0caf5                            # User
+fish_color_host 7aa2f7                            # Hostname
+fish_color_host_remote 7aa2f7                     # Remote host
+fish_color_status 565f89                          # Status line (low emphasis)
+fish_pager_color_progress 414868                  # Pager progress bar
+fish_pager_color_prefix 7dcfff                    # Match prefix (Cyan)
+fish_pager_color_completion c0caf5                # Completions (Normal text)
+fish_pager_color_description 9aa5ce               # Descriptions (Markdown text)

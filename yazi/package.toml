@@ -31,3 +31,7 @@ use = "kmlupreti/ayu-dark"
 rev = "5412a78"
 hash = "60690920e8c0f9f81ff02009de5d156f"
 
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "5f56364"
+hash = "c0bf69ad2c44005892d586e9693993c6"
