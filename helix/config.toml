@@ -21,8 +21,8 @@ indent-heuristic = "tree-sitter"
 end-of-line-diagnostics = "info"
 
 [editor.statusline]
-left = ["version-control", "spacer", "workspace-diagnostics", "diagnostics", "file-modification-indicator"]
-center = []
+left = ["file-name", "file-modification-indicator"]
+center = ["workspace-diagnostics"]
 right = []
 separator = "|"
 mode.normal = "NORMAL"
