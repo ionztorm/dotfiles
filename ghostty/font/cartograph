@@ -1,9 +1,9 @@
 font-family = Cartograph CF
-font-style = Light
+font-style = Regular
 font-style-bold = Heavy
-font-style-italic = Light Italic
+font-style-italic = Regular Italic
 font-style-bold-italic = Heavy Italic
-adjust-cell-height = 8
-adjust-cursor-height = 8
-font-thicken = true
-font-size = 15
+adjust-cell-height = -10%
+# adjust-cursor-height = 8
+# font-thicken = true
+font-size = 20

@@ -21,13 +21,13 @@ indent-heuristic = "tree-sitter"
 end-of-line-diagnostics = "info"
 
 [editor.statusline]
-left = ["file-name", "file-modification-indicator"]
+left = ["mode", "file-base-name", "file-modification-indicator"]
 center = ["workspace-diagnostics"]
-right = []
+right = ["spinner"]
 separator = "|"
-mode.normal = "NORMAL"
-mode.insert = "INSERT"
-mode.select = "SELECT"
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -57,26 +57,12 @@ prefix-len = 1
 # =============================================================================
 
 [keys.normal]
-# cancel selection and return to original position
 esc = ["collapse_selection", "keep_primary_selection"]
-
-# move selected text up
 "S-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
-
-# move selected text down
 "S-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
-
-# Go to the end of the document
 G="goto_file_end"
-
-# go to the next paragraph
 "{" = ["goto_next_paragraph"]
-
-# go to previous paragraph
 "}" = ["goto_prev_paragraph"]
-
-# move hella fast
-"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
 
 # opens lazygit (if installed)
 C-g = [
@@ -110,10 +96,8 @@ w = ":write"
 space.r = ":config-reload"
 space.l = ":lsp-restart"
 space.q = ":write-quit-all"
+t.i = ":toggle lsp.display-inlay-hints"
 
-# togglers
-[keys.normal.space.t]
-i = ":toggle lsp.display-inlay-hints"
 
 [keys.select]
 "{" = ["goto_next_paragraph"]

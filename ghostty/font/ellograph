@@ -1,9 +1,9 @@
 font-family = Ellograph CF
-font-style = Light
+font-style = Regular
 font-style-bold = Heavy
 font-style-italic = Light Italic
 font-style-bold-italic = Heavy Italic
-adjust-cell-height = 8
-adjust-cursor-height = 8
-font-thicken = true
-font-size = 14
+adjust-cell-height = 5
+# adjust-cursor-height = 8
+# font-thicken = true
+font-size = 22
