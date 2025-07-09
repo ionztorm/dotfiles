@@ -143,6 +143,16 @@ name = "prisma"
 language-servers = ["prisma-language-server"]
 auto-format = true
 
+[language-server.sql-language-server]
+command = "sql-language-server"
+args = ["up", "--method", "stdio"]
+
+[[language]]
+name = "sql"
+language-servers = ["sql-language-server"]
+formatter = { command = "pg_format", args = ["-"] }
+auto-format = true
+
 # =============================================================================
 # Markdown 🎯
 # =============================================================================
