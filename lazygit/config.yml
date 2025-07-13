@@ -25,30 +25,30 @@
    #   '*': '#b4befe'
 
 # Tokyo Night Storm
-gui:
-  theme:
-    activeBorderColor:
-      - '#7aa2f7'        # Blue (Active)
-      - bold
-    inactiveBorderColor:
-      - '#565f89'        # Dim gray (Inactive)
-    optionsTextColor:
-      - '#7dcfff'        # Cyan (Options)
-    selectedLineBgColor:
-      - '#292e42'        # Dark background highlight
-    cherryPickedCommitBgColor:
-      - '#3b4261'        # Subtle dark bg
-    cherryPickedCommitFgColor:
-      - '#f7768e'        # Red (emphasis)
-    unstagedChangesColor:
-      - '#f7768e'        # Red (unstaged)
-    defaultFgColor:
-      - '#c0caf5'        # Default foreground
-    searchingActiveBorderColor:
-      - '#e0af68'        # Yellow (search highlight)
+# gui:
+#   theme:
+#     activeBorderColor:
+#       - '#7aa2f7'        # Blue (Active)
+#       - bold
+#     inactiveBorderColor:
+#       - '#565f89'        # Dim gray (Inactive)
+#     optionsTextColor:
+#       - '#7dcfff'        # Cyan (Options)
+#     selectedLineBgColor:
+#       - '#292e42'        # Dark background highlight
+#     cherryPickedCommitBgColor:
+#       - '#3b4261'        # Subtle dark bg
+#     cherryPickedCommitFgColor:
+#       - '#f7768e'        # Red (emphasis)
+#     unstagedChangesColor:
+#       - '#f7768e'        # Red (unstaged)
+#     defaultFgColor:
+#       - '#c0caf5'        # Default foreground
+#     searchingActiveBorderColor:
+#       - '#e0af68'        # Yellow (search highlight)
 
-  authorColors:
-    '*': '#bb9af7'       # Magenta (author names)
+#   authorColors:
+#     '*': '#bb9af7'       # Magenta (author names)
 
 
  # Ayu Mirage
@@ -186,3 +186,29 @@ gui:
 
 #   authorColors:
 #     '*': '#6cb6ff'        # scale.blue.2
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#79c0ff'        # scale.blue.2 — bright blue for active border
+      - bold
+    inactiveBorderColor:
+      - '#484f58'        # scale.gray.5 — darker gray for inactive border
+    optionsTextColor:
+      - '#79c0ff'        # scale.blue.2
+    selectedLineBgColor:
+      - '#161b22'        # canvas.subtle
+    cherryPickedCommitBgColor:
+      - '#30363d'        # border.default
+    cherryPickedCommitFgColor:
+      - '#c9d1d9'        # fg.default
+    unstagedChangesColor:
+      - '#f85149'        # danger.fg
+    defaultFgColor:
+      - '#c9d1d9'        # fg.default
+    searchingActiveBorderColor:
+      - '#d29922'        # attention.fg
+
+  authorColors:
+    '*': '#79c0ff'        # scale.blue.2
+

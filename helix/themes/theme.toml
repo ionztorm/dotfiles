@@ -5,7 +5,8 @@
 # inherits = "ashen"
 # inherits = "github_dark_dimmed"
 # inherits = "ayu_mirage"
-inherits = "tokyonight_storm"
+# inherits = "tokyonight_storm"
+inherits = "github_dark"
 
 "ui.background" = {}
 # "ui.virtual.ruler" = {bg ="g_10"}

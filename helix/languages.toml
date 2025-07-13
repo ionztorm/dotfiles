@@ -149,7 +149,7 @@ args = ["up", "--method", "stdio"]
 
 [[language]]
 name = "sql"
-language-servers = ["sql-language-server"]
+# language-servers = ["sql-language-server"]
 formatter = { command = "pg_format", args = ["-"] }
 auto-format = true
 

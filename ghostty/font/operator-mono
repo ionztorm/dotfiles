@@ -1,11 +1,11 @@
-font-family = Berkeley Mono
-font-style = Regular
+font-family = Operator Mono
+font-style = Book
 font-style-bold = Bold
 font-style-italic = Oblique
 font-style-bold-italic = Bold Oblique
-font-feature = ss02
+# font-feature = ss02
 adjust-cell-height = 2
 adjust-cursor-height = 7
 adjust-box-thickness = 1
 font-thicken = true
-font-size = 20
+font-size = 19

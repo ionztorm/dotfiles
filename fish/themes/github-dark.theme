@@ -1,0 +1,32 @@
+# name: 'GitHub Dark'
+
+fish_color_normal c9d1d9
+fish_color_command d2a8ff
+fish_color_param ffa657
+fish_color_keyword ff7b72
+fish_color_quote a5d6ff
+fish_color_redirection f85149
+fish_color_end 58a6ff
+fish_color_comment 8b949e
+fish_color_error f85149
+fish_color_gray 6e7681
+fish_color_selection --background=0c2d6b
+fish_color_search_match --background=0c2d6b
+fish_color_option 79c0ff
+fish_color_operator 58a6ff
+fish_color_escape 79c0ff
+fish_color_autosuggestion 484f58
+fish_color_cancel f85149
+
+# 💜 Directory colors (purple)
+fish_color_cwd d2a8ff
+fish_color_cwd_root d2a8ff
+
+fish_color_user c9d1d9
+fish_color_host 79c0ff
+fish_color_host_remote 79c0ff
+fish_color_status 8b949e
+fish_pager_color_progress 30363d
+fish_pager_color_prefix 79c0ff
+fish_pager_color_completion c9d1d9
+fish_pager_color_description 6e7681

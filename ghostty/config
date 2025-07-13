@@ -3,6 +3,7 @@
 mouse-hide-while-typing = true
 cursor-style-blink = true
 auto-update-channel = tip
+window-padding-color = extend-always
 
 # clipboard
 # -------------------------------------
@@ -11,8 +12,8 @@ clipboard-write = allow
 
 # config files
 # -------------------------------------
-config-file = ./theme/tokyonight-storm
-config-file = ./font/monolisa
+config-file = ./theme/github-dark
+config-file = ./font/operator-mono
 config-file = ./opacity/95
 config-file = ./blur/50
 config-file = ./keybind/keybinds
