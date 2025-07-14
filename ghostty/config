@@ -3,7 +3,7 @@
 mouse-hide-while-typing = true
 cursor-style-blink = true
 auto-update-channel = tip
-window-padding-color = extend-always
+# window-padding-color = extend-always
 
 # clipboard
 # -------------------------------------
