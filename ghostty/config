@@ -14,7 +14,7 @@ clipboard-write = allow
 # -------------------------------------
 config-file = ./theme/github-dark
 config-file = ./font/operator-mono
-config-file = ./opacity/95
+config-file = ./opacity/50
 config-file = ./blur/50
 config-file = ./keybind/keybinds
 config-file = ./macos/macos-only
