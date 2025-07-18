@@ -523,7 +523,7 @@ themes {
 
 
 // theme "tokyo-night-storm"
-theme "github_dark"
+theme "catppuccin-macchiato"
  
 // Choose the base input mode of zellij.
 // Default: normal

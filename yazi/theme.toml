@@ -1,6 +1,6 @@
 [flavor]
-# light = "catppucin-mocha"
-# dark = "catppuccin-mocha"
+light = "catppucin-mocha"
+dark = "catppuccin-mocha"
 # dark = "tokyo-night"
 # dark = "gruvbox-dark"
 # use = "kanagawa"
@@ -9,6 +9,6 @@
 # dark = "ashen"
 # dark = "ayu-dark"
 # dark = "ayu-mirage-custom"
-dark = "github-dark-dimmed"
-light = "github-dark-dimmed"
+# dark = "github-dark-dimmed"
+# light = "github-dark-dimmed"
 # dark = "github-dark"

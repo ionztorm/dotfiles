@@ -1,11 +1,10 @@
 font-family = Operator Mono
 font-style = Book
-font-style-bold = Bold
-font-style-italic = Oblique
-font-style-bold-italic = Bold Oblique
-# font-feature = ss02
-adjust-cell-height = 2
+font-style-bold = Medium
+font-style-italic = Book Italic
+font-style-bold-italic = Medium Italic
+adjust-cell-height = 4
 adjust-cursor-height = 7
 adjust-box-thickness = 1
 font-thicken = true
-font-size = 19
+font-size = 18

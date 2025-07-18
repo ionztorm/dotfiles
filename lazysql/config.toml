@@ -1,0 +1,18 @@
+ConfigFile = '/Users/leonlonsdale/.config/lazysql/config.toml'
+
+[application]
+DefaultPageSize = 300
+DisableSidebar = false
+SidebarOverlay = false
+
+[[database]]
+Name = 'chirpy'
+URL = 'postgres://leonlonsdale:@localhost:5432/chirpy?sslmode=disable'
+Provider = 'postgres'
+Username = ''
+Password = ''
+Hostname = ''
+Port = ''
+DBName = 'chirpy'
+URLParams = ''
+Commands = []

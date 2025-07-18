@@ -1,12 +1,12 @@
 # inherits = "kanagawa"
 # inherits = "gruvbox-material"
 # inherits = "dark_plus"
-# inherits = "catppuccin_mocha"
+inherits = "catppuccin_mocha"
 # inherits = "ashen"
 # inherits = "github_dark_dimmed"
 # inherits = "ayu_mirage"
 # inherits = "tokyonight_storm"
-inherits = "github_dark"
+# inherits = "github_dark"
 
 "ui.background" = {}
 # "ui.virtual.ruler" = {bg ="g_10"}

@@ -1,28 +1,28 @@
  # Catppuccin Mocha
- # gui:
- #   theme:
- #     activeBorderColor:
- #       - '#f5e0dc'
- #       - bold
- #     inactiveBorderColor:
- #       - '#a6adc8'
- #     optionsTextColor:
- #       - '#89b4fa'
- #     selectedLineBgColor:
- #       - '#313244'
-   #   cherryPickedCommitBgColor:
-   #     - '#45475a'
-   #   cherryPickedCommitFgColor:
-   #     - '#f5e0dc'
-   #   unstagedChangesColor:
-   #     - '#f38ba8'
-   #   defaultFgColor:
-   #     - '#cdd6f4'
-   #   searchingActiveBorderColor:
-   #     - '#f9e2af'
+ gui:
+   theme:
+     activeBorderColor:
+       - '#f5e0dc'
+       - bold
+     inactiveBorderColor:
+       - '#a6adc8'
+     optionsTextColor:
+       - '#89b4fa'
+     selectedLineBgColor:
+       - '#313244'
+     cherryPickedCommitBgColor:
+       - '#45475a'
+     cherryPickedCommitFgColor:
+       - '#f5e0dc'
+     unstagedChangesColor:
+       - '#f38ba8'
+     defaultFgColor:
+       - '#cdd6f4'
+     searchingActiveBorderColor:
+       - '#f9e2af'
 
-   # authorColors:
-   #   '*': '#b4befe'
+   authorColors:
+     '*': '#b4befe'
 
 # Tokyo Night Storm
 # gui:
@@ -187,28 +187,28 @@
 #   authorColors:
 #     '*': '#6cb6ff'        # scale.blue.2
 
-gui:
-  theme:
-    activeBorderColor:
-      - '#79c0ff'        # scale.blue.2 — bright blue for active border
-      - bold
-    inactiveBorderColor:
-      - '#484f58'        # scale.gray.5 — darker gray for inactive border
-    optionsTextColor:
-      - '#79c0ff'        # scale.blue.2
-    selectedLineBgColor:
-      - '#161b22'        # canvas.subtle
-    cherryPickedCommitBgColor:
-      - '#30363d'        # border.default
-    cherryPickedCommitFgColor:
-      - '#c9d1d9'        # fg.default
-    unstagedChangesColor:
-      - '#f85149'        # danger.fg
-    defaultFgColor:
-      - '#c9d1d9'        # fg.default
-    searchingActiveBorderColor:
-      - '#d29922'        # attention.fg
+# gui:
+#   theme:
+#     activeBorderColor:
+#       - '#79c0ff'        # scale.blue.2 — bright blue for active border
+#       - bold
+#     inactiveBorderColor:
+#       - '#484f58'        # scale.gray.5 — darker gray for inactive border
+#     optionsTextColor:
+#       - '#79c0ff'        # scale.blue.2
+#     selectedLineBgColor:
+#       - '#161b22'        # canvas.subtle
+#     cherryPickedCommitBgColor:
+#       - '#30363d'        # border.default
+#     cherryPickedCommitFgColor:
+#       - '#c9d1d9'        # fg.default
+#     unstagedChangesColor:
+#       - '#f85149'        # danger.fg
+#     defaultFgColor:
+#       - '#c9d1d9'        # fg.default
+#     searchingActiveBorderColor:
+#       - '#d29922'        # attention.fg
 
-  authorColors:
-    '*': '#79c0ff'        # scale.blue.2
+#   authorColors:
+#     '*': '#79c0ff'        # scale.blue.2
 
